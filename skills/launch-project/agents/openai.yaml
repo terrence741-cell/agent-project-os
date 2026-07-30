@@ -1,0 +1,4 @@
+interface:
+  display_name: "Launch Project"
+  short_description: "Plan a resumable project before confirmed setup."
+  default_prompt: "Use $launch-project to assess this project and propose a minimal resumable setup."
