@@ -9,12 +9,30 @@ Turn today’s work into the next safe move without creating a second project tr
 
 ## 1. Establish the project boundary
 
-Confirm the project root and the files or folders that may be read. If the user supplied a specific project path and has authorized that project, treat that as the read boundary; otherwise ask one concise question before reading.
+Confirm the project root and the files or folders that may be read. If the user supplied a specific project path and has authorized that project, treat that as the read boundary; otherwise follow **Respond before the boundary exists** below.
 
 - Read only the project contract/stable entry and the current running-state artifact named by it. Follow an additional material route only when it is necessary to understand this specific update.
 - State the exact paths read. Do not scan sibling projects, the full workspace, archives, chats, or global Memory.
 - Treat project evidence as stronger than remembered conversation. Mark a claim that has no supporting project evidence as **user-reported / awaiting confirmation**, not as an established fact.
 - Do not create a missing contract, status file, daily log, or template during a check-in.
+
+### Respond before the boundary exists
+
+A missing project path blocks reading and writing. It does not block helping. When the user describes a real situation without naming a project, do not make the request for a path the only content of the response.
+
+In the same response:
+
+1. **Act on what the user actually said.** Give at least one concrete action they can take now, derived only from their own words and any stated constraint such as available time, deadline, or overrun. A generic method the user can apply without project evidence is legitimate here.
+2. **Mark the basis.** State plainly that the suggestion comes from their description and has not been checked against project files. Every fact they reported stays **user-reported / awaiting confirmation**.
+3. **Ask for the path as a secondary item.** Request it to ground the next round, not as a precondition for this one.
+
+While no read boundary is established:
+
+- Propose no state update. Section 5's closing proposal does not apply until a project scope exists; an unconfirmed path or invented target is never an acceptable substitute.
+- Read no project file, index, archive, or Memory to compensate for the missing path.
+- Present no suggestion, estimate, or diagnosis as an established project fact, and do not infer that work is unstarted, complete, unowned, or blocked.
+
+Section 4's escalation test still applies, with two adjustments for this state. Read "evidence" there as the user's own account, which you cite as such rather than as project evidence. Add the mid-course review as an offer alongside the check-in above; do not replace the check-in with it, and do not withhold the immediate action while the user decides.
 
 ## 2. Recover only the context needed now
 
@@ -38,27 +56,27 @@ Classify the user’s input without expanding it into a generic project intervie
 | Blocker or delay | Separate confirmed blocker, missing evidence, and decision needed; propose an unblock action. |
 | Decision or changed constraint | State its project impact and the smallest affected state item. Do not silently overwrite an earlier decision. |
 | New fact or observation | Label the source and confidence; identify whether it changes the current plan. |
-| Request for today’s plan | Use current state plus the stated availability/constraint; do not invent priorities or deadlines. |
+| Request for today’s plan | Use current state plus the stated availability/constraint; do not invent priorities or deadlines. With no read boundary yet, work from the user’s own stated situation and constraint instead, and label it as such. |
 
 Return a concise check-in with:
 
-1. **What I understand** — user-reported update, grounded project context, and any uncertainty.
+1. **What I understand** — user-reported update, grounded project context, and any uncertainty. With no read boundary, say plainly that no project file was read, and leave the grounded part empty rather than filling it by inference.
 2. **This-session next action** — one concrete action that can be done now, plus a narrowly scoped question only if it blocks that action.
 3. **Watch / decision** — only a material dependency, risk, or owner decision that needs attention.
-4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, the source of every new fact, and enough information for a fresh session to identify confirmed facts, open items, next action, and boundaries.
+4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, the source of every new fact, and enough information for a fresh session to identify confirmed facts, open items, next action, and boundaries. While no read boundary exists, drop this item; one plain sentence saying no state update is proposed yet is also fine, but never a heading with placeholder content.
 
 Do not turn a suggestion, forecast, or Agent diagnosis into a confirmed project fact. Keep repeated operational updates in the project’s existing operating record; do not create a parallel diary just because the update is daily.
 
 ## 4. Escalate without overreaching
 
-Recommend a **read-only mid-course review** instead of treating the issue as an ordinary check-in when evidence indicates one or more of these:
+Recommend a **read-only mid-course review** when evidence indicates one or more of these:
 
 - the stated objective, scope, success measure, owner, or decision boundary has changed or conflicts with the project contract;
 - the same blocker, missed cadence, or workaround recurs and the current next action no longer resolves it;
 - priorities, resources, assumptions, or strategy must be traded off across several current items;
 - the user explicitly asks whether to keep, change, pause, or re-plan the work.
 
-Explain the trigger and the evidence, then offer a read-only review of goals, scope, rhythm, blockers, and strategy. Do not write a re-plan, revise the contract, or promote a review conclusion to fact unless the user later confirms a specific change.
+Explain the trigger and the evidence, then offer a read-only review of goals, scope, rhythm, blockers, and strategy. The review is an offer, not a substitute: still give this session's next action, so the user is not left waiting on a decision about the review. Drop the check-in's own next action only when the user asks for the review instead. Do not write a re-plan, revise the contract, or promote a review conclusion to fact unless the user later confirms a specific change.
 
 For sensitive personal, health, child, client, personnel, financial, or private information:
 
@@ -69,7 +87,7 @@ For sensitive personal, health, child, client, personnel, financial, or private 
 
 ## 5. Propose, then wait before state changes
 
-End every check-in with a minimal state-update proposal. It may add a confirmed outcome, replace the next action, record a blocker, resolve one item of context to complete, or add a dated operating entry only when the existing project design calls for one.
+End every check-in that has an established read boundary with a minimal state-update proposal. It may add a confirmed outcome, replace the next action, record a blocker, resolve one item of context to complete, or add a dated operating entry only when the existing project design calls for one. When no boundary exists yet, section 1 governs: give help, propose nothing.
 
 Until the user explicitly confirms both the target and proposed content:
 
