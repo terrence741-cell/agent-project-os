@@ -1,6 +1,6 @@
 ---
 name: review-project-structure
-description: Read-only diagnosis of whether a Markdown project has enough structure for an Agent to find its entry point, resume current work, load materials on demand, and finish safely. Use when a user asks to review, assess, audit, or improve one existing project’s Agent-readiness or resumability; do not use to launch a new project or restructure files without a separate confirmed change request.
+description: Read-only second opinion on how one existing non-code project kept in Markdown is organized — client delivery, content operations, research, or long-term personal matters. Could a stranger, or a fresh Agent session, open it cold and tell what it is for, find the current status, and safely continue? Use for "这个项目结构合理吗"、"文件该怎么放"、"帮我看看这么记有没有问题"、"下次接着做会不会找不着". Returns keep / change / ignore with exact paths as evidence and proposes only the smallest fix; it never moves, renames, or rewrites anything. This reviews how the work is organized, not whether the work is still worth doing — say so plainly when the user is really asking about direction, scope, or whether to continue. Not for code repositories or source trees. Use launch-project instead when the user wants the reorganization actually carried out.
 ---
 
 # Review Project Structure

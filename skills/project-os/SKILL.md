@@ -1,6 +1,6 @@
 ---
 name: project-os
-description: Route a natural-language request to the appropriate Agent Project OS workflow without requiring the user to know internal Skill names. Use when a user asks to start, take over, organize, advance, update, review, recalibrate, remember, or prioritize work across one or more projects. Identify the intent, then immediately execute exactly one selected workflow in the same turn; do not inspect projects or write files while routing.
+description: Entry point for running non-code projects kept in Markdown — client delivery, content operations, research, and long-term personal matters. Use when a request is about a project but the right workflow is not obvious, including "帮我开个项目"、"这个项目怎么接手"、"接下来该干嘛"、"感觉方向不对了"、"还值不值得做"、"先做哪个"、"记住我的习惯". When the intent is clear, pick exactly one workflow and run it in the same turn; when it is genuinely ambiguous, ask one question that tells the paths apart and route on the answer. Inspects no projects and writes no files while routing, and defers to a sibling Skill the user has clearly asked for.
 ---
 
 # Project OS
@@ -29,9 +29,11 @@ The router is not the current working Skill. It must select exactly one route, t
 | --- | --- |
 | `launch-project` | `../launch-project/SKILL.md` |
 | `project-check-in` | `../project-check-in/SKILL.md` |
-| Mid-course review workflow | `../review-project-structure/SKILL.md` until a dedicated workflow exists |
+| Mid-course review workflow | `../review-project-structure/SKILL.md` — see the note below |
 | Memory governance | `../bootstrap-workspace/SKILL.md` |
 | `review-portfolio` | `../review-portfolio/SKILL.md` |
+
+**Mid-course review has no dedicated Skill yet.** `review-project-structure` covers how a project is organized, not whether its direction, scope, or continued investment still make sense. Route there anyway — it is the closest available workflow — but say plainly, in one sentence, that this version reviews the project's structure rather than its direction, so the user is not left expecting a judgement the Skill will not make. Do not silently substitute a structural answer for the question the user asked.
 
 Only the selected Skill may perform substantive work in this turn. Its conclusion, unresolved question, and stated next step become the routing context for the next user message. Use that recent context to resume the selected workflow rather than sending the user back through a generic router question.
 

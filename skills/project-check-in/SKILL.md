@@ -1,6 +1,6 @@
 ---
 name: project-check-in
-description: Turn one user update about an existing Markdown project into a grounded next action and a minimal, reviewable state-update proposal. Use when a user reports progress, a blocker, a decision, a new fact, or asks what to do next in a project already in progress. Read only the user-approved project scope and its contract/current-state artifacts; do not use to launch a project, run a portfolio review, or write state before explicit confirmation.
+description: Move one in-progress non-code project forward from a single update. Use when the user reports what happened, hits a blocker, makes a decision, learns something new, or asks what to do next — "今天做了这些"、"客户改需求了"、"卡住了推不动"、"接下来该干嘛"、"更新一下进度"、"这周安排一下". Always gives one concrete next action, even when no project path has been named yet. Once the user names a project, reads only that project's own entry and current-status files and proposes a small status edit, which it does not write until the user approves. Not for starting a project, comparing several projects, or governing long-term memory. It also does not judge direction, scope, or whether the work is still worth doing — when that is what the user is really asking, say so rather than answering it with a next action.
 ---
 
 # Project Check-in

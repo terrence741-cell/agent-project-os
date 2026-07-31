@@ -1,6 +1,6 @@
 ---
 name: launch-project
-description: Launch, take over, or minimally organize a Markdown project so a later Agent can continue it correctly. Use when a user wants to start a project, make an under-structured project resumable, or assess an existing project before reorganizing it. First provide a read-only startup package; create or change project files only after explicit confirmation.
+description: Start a new project, take over someone else's messy one, or give a scattered pile of notes just enough structure to keep going — for client delivery, content operations, research, or long-term personal matters kept in Markdown. Use for "我想开个新项目"、"帮我接手这个"、"文件很乱不知道从哪看起"、"我想长期跟进这件事"、"帮我把它整理成能一直做下去的样子". Always answer first with a read-only plan — what is known, what is missing, one concrete next action, and the files it proposes to write — and create or change files only after the user confirms. Use review-project-structure instead when the user only wants an opinion on an existing setup rather than the reorganization carried out.
 ---
 
 # Launch Project

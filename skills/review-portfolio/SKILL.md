@@ -1,6 +1,6 @@
 ---
 name: review-portfolio
-description: Review a portfolio of projects from a thin project index to surface cross-project blockers, stale status, conflicts, and reuse opportunities. Use when a user asks for a project portfolio review, global project health check, or cross-project prioritization. Read indexes and summaries first, remain read-only by default, and do not create a second source of project truth.
+description: Compare several non-code projects at once to decide what to do first and to spot work that is stuck, going stale, colliding, or duplicated across projects — client delivery, content operations, research, or long-term personal matters kept in Markdown. Use for "我手上有哪些项目"、"先做哪个"、"哪个最急"、"这几个是不是重复了"、"整体过一遍"、"项目之间有没有冲突". Works from whatever project list or set of entry files the user points to — asks for a bounded list rather than scanning everything, stays read-only, and leaves each project's own files as the source of truth for its status. Not for a deep dive into a single project.
 ---
 
 # Review Portfolio

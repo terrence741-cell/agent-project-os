@@ -1,6 +1,6 @@
 ---
 name: bootstrap-workspace
-description: Safely map an Agent workspace from user-authorized Markdown Memory, project indexes, and stable rules. Use when a user asks to set up, onboard, orient, consolidate, or establish minimal Agent workspace memory. Inventory only the agreed scope, classify findings before proposing changes, and never automatically merge or overwrite Memory.
+description: Set up or clean up what the Agent should durably remember about the user and their projects — working preferences, standing rules, and where each project lives. Use for "以后记住我…"、"别每次都问我这个"、"我习惯这样"、"帮我建立长期记忆"、"第一次用，帮我把工作区弄好"、"看看你记住的东西还对不对"、"整理一下我的长期偏好". Reads only the folders the user names, sorts findings into keep / add / conflict / private / skip, shows both sides of a conflict instead of picking a winner, and never writes memory without explicit approval of both the target file and the exact entries. Not for reviewing one project's progress or comparing projects.
 ---
 
 # Bootstrap Workspace
