@@ -1,0 +1,4 @@
+interface:
+  display_name: "项目进展更新"
+  short_description: "将项目近况转化为下一项安全行动。"
+  default_prompt: "使用 $project-check-in 处理这次更新，并提出最小化、已确认的状态更新。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "启动项目"
+  short_description: "在确认建立前，先规划可续接的项目。"
+  default_prompt: "使用 $launch-project 启动这个项目，并先提出最小的可续接设置方案。"

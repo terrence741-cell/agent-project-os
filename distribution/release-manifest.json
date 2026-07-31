@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "canonical_package": "agent-project-os",
+  "packages": [
+    {
+      "name": "agent-project-os",
+      "language": "zh-CN",
+      "role": "canonical",
+      "version": "1.0.0",
+      "source": "plugins/agent-project-os"
+    },
+    {
+      "name": "agent-project-os-en",
+      "language": "en",
+      "role": "localized-release-package",
+      "version": "1.0.0",
+      "source": "plugins/agent-project-os-en"
+    }
+  ],
+  "required_parity": [
+    "six-skill-inventory",
+    "skill-routing",
+    "read-write-boundaries",
+    "confirmation-gates",
+    "manifest-version",
+    "license",
+    "l0-l4-release-evidence"
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "审阅项目组合"
+  short_description: "基于精简索引审阅项目风险。"
+  default_prompt: "使用 $review-portfolio 基于索引审阅这个项目组合，不修改项目文件。"

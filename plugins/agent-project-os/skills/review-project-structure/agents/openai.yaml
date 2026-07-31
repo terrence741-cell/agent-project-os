@@ -1,0 +1,4 @@
+interface:
+  display_name: "审阅项目结构"
+  short_description: "诊断项目是否可被安全续接。"
+  default_prompt: "使用 $review-project-structure 评估此项目，且不修改文件。"
