@@ -1,0 +1,17 @@
+{
+  "name": "agent-project-os",
+  "version": "0.2.0",
+  "description": "Help file-system Agents route, launch, advance, review, and safely resume real Markdown projects.",
+  "author": {
+    "name": "Agent Project OS"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "project-management",
+    "skills",
+    "memory",
+    "continuity",
+    "markdown",
+    "non-code-projects"
+  ]
+}
