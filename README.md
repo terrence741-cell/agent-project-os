@@ -18,8 +18,9 @@ If you ask an Agent to do this for you, use: “Install the English Agent Projec
 OS package only: `agent-project-os-en`.”
 
 Read the complete English rules and package documentation in
-[`plugins/agent-project-os-en/`](plugins/agent-project-os-en/). For Chinese,
-see [README.zh-CN.md](README.zh-CN.md).
+[`plugins/agent-project-os-en/`](plugins/agent-project-os-en/).
+
+中文说明请见 [README.zh-CN.md](README.zh-CN.md)。
 
 The repository is under V1.0.0 review. See the
 [bilingual distribution contract](distribution/BILINGUAL-DISTRIBUTION.md) and
