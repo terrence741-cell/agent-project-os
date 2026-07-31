@@ -1,6 +1,6 @@
 ---
 name: review-portfolio
-description: Compare several non-code projects at once to decide what to do first and to spot work that is stuck, going stale, colliding, or duplicated across projects — client delivery, content operations, research, or long-term personal matters kept in Markdown. Use for "我手上有哪些项目"、"先做哪个"、"哪个最急"、"这几个是不是重复了"、"整体过一遍"、"项目之间有没有冲突". Works from whatever project list or set of entry files the user points to — asks for a bounded list rather than scanning everything, stays read-only, and leaves each project's own files as the source of truth for its status. Not for a deep dive into a single project.
+description: Compare several non-code projects at once to surface what is stuck, going stale, colliding, or duplicated across them — client delivery, content operations, research, or long-term personal matters kept in Markdown. Use for "我手上有哪些项目"、"先做哪个"、"哪个最急"、"这几个是不是重复了"、"整体过一遍"、"项目之间有没有冲突". Reads a thin index or set of entry files rather than project bodies, and asks for a bounded list when no index exists. Surfaces the evidence a prioritisation decision needs — blockers, waiting states, dates — but leaves the ranking itself to the user, and leaves each project's own files as the source of truth for its status. Not for a deep dive into a single project.
 ---
 
 # Review Portfolio
