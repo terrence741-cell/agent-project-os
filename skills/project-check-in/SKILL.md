@@ -62,6 +62,11 @@ Classify the user’s input without expanding it into a generic project intervie
 
 An update may match more than one row. Handle every row it matches inside the single response; do not pick one and drop the rest, and do not split the check-in into multiple rounds because of this.
 
+Preserve the informational shape of every user-reported fact:
+
+- If a number has no stated unit, currency, denominator, or range meaning, keep it unitless and mark the missing part rather than supplying a likely one.
+- Keep an open decision open. Mentioned people, options, or examples are not an exhaustive candidate set unless the user explicitly says they are; do not turn “who decides?” into a choice between the people named in the update.
+
 With no read boundary established, every row applies with the same adaptation: work only from the user's own stated situation and constraint, label that basis as such, and name no project state item as affected. Where a row calls for the smallest affected state item, describe what would likely need updating once the path is known, without asserting it.
 
 Return a concise check-in with:
