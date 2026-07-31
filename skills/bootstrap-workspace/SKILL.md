@@ -30,7 +30,7 @@ Place each finding in exactly one of these buckets before suggesting any write:
 
 | Bucket | Meaning | Default handling |
 | --- | --- | --- |
-| Stable fact or rule | Durable preference, operating rule, or routing fact | Candidate for minimal Memory |
+| Stable fact or rule | Durable preference, operating rule, or routing fact | Candidate for minimal Memory only with source, applicable scope, and confirmation or latest-review date |
 | Current project state | Active focus, milestone, or temporary decision | Keep with its project; do not promote to long-term Memory |
 | Historical record | Superseded or time-bound context | Preserve in place; do not use as default instruction |
 | Sensitive | Credentials, personal data, confidential client material, or unclear private content | Do not copy; ask for handling if needed |
@@ -45,7 +45,7 @@ For a read-only pass, return a concise proposal with these sections:
 
 1. **Authorized sources inspected** — exact paths and any excluded areas.
 2. **Keep** — stable information already in the right home.
-3. **Candidate additions** — proposed minimal entries, each with source and reason.
+3. **Candidate additions** — proposed minimal entries, each with source, applicable scope, confirmation or latest-review date, and reason.
 4. **Conflicts** — both statements, their sources, impact, and the precise decision needed.
 5. **Do not import** — current state, history, sensitive material, duplicates, and unsupported inferences.
 6. **Proposed next write** — exact target path and exact entries, or “no write proposed.”
@@ -70,3 +70,4 @@ Afterward, report the changed paths, entries written, and items intentionally le
 - Do not copy secrets, personal data, or unclear confidential content.
 - Do not merge, overwrite, choose between, or assign an interim default to conflicting Memory sources.
 - Keep project execution status in project files unless the user explicitly adopts a durable cross-project rule.
+- Treat the project contract's memory scope as a hard boundary: do not promote facts that the project excludes from workspace Memory or Portfolio.

@@ -25,7 +25,7 @@ Include only the sections useful to the situation:
 2. **Provisional three-dimensional classification** — state working form (goal-oriented, operational, or mixed), service protocol (delivery progress, continuous operation, long-term companionship), and maturity (blank concept, scattered materials, runnable but messy, or mature/resumable). Give a short reason for each and label unsupported parts provisional.
 3. **Key gaps** — ask only for facts that change safety, structure, or the next action. A gap is non-blocking if it can safely remain unresolved in the current-state record.
 4. **First action** — recommend one concrete, reversible next move that produces value before a complete system exists.
-5. **Proposed artifacts** — list the minimum creates/changes with exact paths when a target path is known; otherwise show path patterns and state that final paths require confirmation. For each artifact, give purpose and whether it is a stable rule source, current-state source, or only a route to existing evidence.
+5. **Proposed artifacts** — list the minimum creates/changes with exact paths when a target path is known; otherwise show path patterns and state that final paths require confirmation. For each artifact, give purpose and whether it is a stable rule source, current-state source, or only a route to existing evidence. The proposed stable entry must name the project's read scope, sensitive-content boundary, and what may never be promoted to workspace Memory or Portfolio.
 6. **Confirmation gate** — ask for explicit approval of the target path, boundaries, and listed writes. Combine this with only the smallest blocking questions.
 
 Do not invent cadence, owner, metrics, workflow, platform, volume, health facts, or other user-owned facts. Mark assumptions as assumptions. Do not ask a fixed questionnaire or require every future-useful detail before proposing a safe minimum.
@@ -68,7 +68,7 @@ After confirmation:
 
 1. Re-check the target path for changes that affect the proposal.
 2. Create or modify only approved artifacts.
-3. Keep stable rules in the stable entry, current facts and next action in the authoritative current-state record, and source locations as routes rather than copied facts.
+3. Keep stable rules in the stable entry, current facts and next action in the authoritative current-state record, and source locations as routes rather than copied facts. In the stable entry, state the project's memory scope: readable project boundary, sensitive-content exclusions, and any permitted path for a future Memory candidate.
 4. Add non-blocking unknowns to that current-state record; do not scatter them into reviews, retrospectives, or source notes.
 5. Report exact changed paths, actual changes, and any departure from the approved proposal.
 
@@ -82,7 +82,7 @@ After approved writing, use a new session or equivalent isolated context. Give i
 2. current state;
 3. next step;
 4. materials to read next; and
-5. boundaries it must not cross.
+5. boundaries it must not cross, including project-memory scope and sensitive-content exclusions.
 
 Record the result in the approved project location only when that write was included in the confirmation. If the project cannot answer one item, identify the smallest missing link and propose a correction; do not silently expand the structure.
 

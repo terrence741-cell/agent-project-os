@@ -45,7 +45,7 @@ Return a concise check-in with:
 1. **What I understand** — user-reported update, grounded project context, and any uncertainty.
 2. **This-session next action** — one concrete action that can be done now, plus a narrowly scoped question only if it blocks that action.
 3. **Watch / decision** — only a material dependency, risk, or owner decision that needs attention.
-4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, and the source of every new fact.
+4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, the source of every new fact, and enough information for a fresh session to identify confirmed facts, open items, next action, and boundaries.
 
 Do not turn a suggestion, forecast, or Agent diagnosis into a confirmed project fact. Keep repeated operational updates in the project’s existing operating record; do not create a parallel diary just because the update is daily.
 
@@ -85,4 +85,4 @@ After confirmation, reread the approved target, apply only the confirmed minimum
 - Do not substitute a recent chat message for a missing project contract or current state.
 - Do not expand approved scope to find a more convenient answer.
 - Do not diagnose, decide, send, schedule, enroll, publish, or otherwise act externally for the user.
-- Do not create a second source of project truth or promote daily dynamics to long-term Memory.
+- Do not create a second source of project truth or promote daily dynamics to long-term Memory. If a stable cross-project learning emerges, hand it to `bootstrap-workspace` only as a candidate with its project source, applicable scope, and confirmation or latest-review date.
