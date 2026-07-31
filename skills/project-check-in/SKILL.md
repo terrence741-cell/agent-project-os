@@ -22,17 +22,19 @@ A missing project path blocks reading and writing. It does not block helping. Wh
 
 In the same response:
 
-1. **Act on what the user actually said.** Give at least one concrete action they can take now, derived only from their own words and any stated constraint such as available time, deadline, or overrun. A generic method the user can apply without project evidence is legitimate here.
+1. **Act on what the user actually said.** Give one concrete action they can take now, derived only from their own words and any stated constraint such as available time, deadline, or overrun. A generic method the user can apply without project evidence is legitimate here.
 2. **Mark the basis.** State plainly that the suggestion comes from their description and has not been checked against project files. Every fact they reported stays **user-reported / awaiting confirmation**.
 3. **Ask for the path as a secondary item.** Request it to ground the next round, not as a precondition for this one.
 
 While no read boundary is established:
 
-- Propose no state update. Section 5's closing proposal does not apply until a project scope exists; an unconfirmed path or invented target is never an acceptable substitute.
+- Propose no state update. Section 5's closing proposal does not apply until a project scope exists; an unconfirmed path or invented target is never an acceptable substitute. Section 3's fourth item still appears, carrying the one-sentence declaration that no proposal is made yet — that declaration is not itself a proposal.
 - Read no project file, index, archive, or Memory to compensate for the missing path.
 - Present no suggestion, estimate, or diagnosis as an established project fact, and do not infer that work is unstarted, complete, unowned, or blocked.
 
-Section 4's escalation test still applies, with two adjustments for this state. Read "evidence" there as the user's own account, which you cite as such rather than as project evidence. Add the mid-course review as an offer alongside the check-in above; do not replace the check-in with it, and do not withhold the immediate action while the user decides.
+Section 4's escalation test still applies in this state, with two adjustments. Read "evidence" there as the user's own account, which you cite as such rather than as project evidence. When that test fires, add the mid-course review as an offer alongside the check-in above; do not replace the check-in with it, and do not withhold the immediate action while the user decides. When the test does not fire, do not raise the review at all.
+
+Section 2's Skill recommendation is suspended in this state. Choosing between `launch-project` and `review-project-structure` requires knowing the project's maturity, which cannot be inferred here. Ask for the path instead.
 
 ## 2. Recover only the context needed now
 
@@ -44,7 +46,7 @@ Locate, if available:
 
 If the contract or current-state artifact is absent, incomplete, conflicting, or outside the approved scope, say exactly what could not be recovered. Ask only for the smallest fact needed to help with the current update. Do not infer that work is unstarted, complete, unowned, or blocked.
 
-When the missing artifact prevents safe resumption rather than merely this answer, recommend `launch-project` for an under-structured project or `review-project-structure` for a mature project. Keep that recommendation read-only; do not launch or restructure it from this Skill.
+When the missing artifact prevents safe resumption rather than merely this answer, recommend `launch-project` for an under-structured project or `review-project-structure` for a mature project. Keep that recommendation read-only; do not launch or restructure it from this Skill. This paragraph applies only once a read boundary exists; with no boundary, section 1 suspends it.
 
 ## 3. Process the update
 
@@ -56,14 +58,18 @@ Classify the user’s input without expanding it into a generic project intervie
 | Blocker or delay | Separate confirmed blocker, missing evidence, and decision needed; propose an unblock action. |
 | Decision or changed constraint | State its project impact and the smallest affected state item. Do not silently overwrite an earlier decision. |
 | New fact or observation | Label the source and confidence; identify whether it changes the current plan. |
-| Request for today’s plan | Use current state plus the stated availability/constraint; do not invent priorities or deadlines. With no read boundary yet, work from the user’s own stated situation and constraint instead, and label it as such. |
+| Request for today's plan | Use current state plus the stated availability/constraint; do not invent priorities or deadlines. |
+
+An update may match more than one row. Handle every row it matches inside the single response; do not pick one and drop the rest, and do not split the check-in into multiple rounds because of this.
+
+With no read boundary established, every row applies with the same adaptation: work only from the user's own stated situation and constraint, label that basis as such, and name no project state item as affected. Where a row calls for the smallest affected state item, describe what would likely need updating once the path is known, without asserting it.
 
 Return a concise check-in with:
 
 1. **What I understand** — user-reported update, grounded project context, and any uncertainty. With no read boundary, say plainly that no project file was read, and leave the grounded part empty rather than filling it by inference.
-2. **This-session next action** — one concrete action that can be done now, plus a narrowly scoped question only if it blocks that action.
+2. **This-session next action** — exactly one concrete action that can be done now. It may be described in several steps as long as they form that single action; do not list alternatives for the user to choose among. Add a narrowly scoped question only if it blocks that action.
 3. **Watch / decision** — only a material dependency, risk, or owner decision that needs attention.
-4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, the source of every new fact, and enough information for a fresh session to identify confirmed facts, open items, next action, and boundaries. While no read boundary exists, drop this item; one plain sentence saying no state update is proposed yet is also fine, but never a heading with placeholder content.
+4. **Proposed state update** — the smallest exact change needed for a later session to resume; include target path, proposed text or replacement, the source of every new fact, and enough information for a fresh session to identify confirmed facts, open items, next action, and boundaries. While no read boundary exists, keep this heading and put exactly one sentence under it saying no state update is proposed until a project path is confirmed. Never place placeholder, speculative, or invented content here.
 
 Do not turn a suggestion, forecast, or Agent diagnosis into a confirmed project fact. Keep repeated operational updates in the project’s existing operating record; do not create a parallel diary just because the update is daily.
 
