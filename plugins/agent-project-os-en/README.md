@@ -2,11 +2,31 @@
 
 [中文说明](../agent-project-os/README.md) · [Bilingual distribution contract](../../distribution/BILINGUAL-DISTRIBUTION.md)
 
-A set of Skills that lets a file-system Agent keep real projects moving across sessions.
+Help desktop Harness Agents such as Claude Code and Codex become real project collaborators.
 
-Most Agent project tools assume the project is code. This one assumes it is not: it may be a client delivery, content operation, research topic, or long-term personal matter. What they have in common is that the work lives in Markdown, the status lives in the user’s mind, and the next session often starts from zero.
+Agent Project OS is an open-source project-management system for desktop Harness Agent users who work with local files. It helps turn a real project—whether a client delivery, content operation, research topic, learning plan, or long-running personal matter—into a workspace an Agent can repeatedly pick up, understand, advance, and safely resume across sessions.
 
-Agent Project OS is a continuity protocol, not a project manager. It never becomes the owner of project facts; it helps the Agent find those facts, act on them, and leave a short, confirmed handoff.
+You should not need to re-explain the background, search for materials, or remember where the last session stopped every time you start a new chat. Agent Project OS guides the Agent to locate the facts in your project files, clarify the current state, propose a next step, and—after your confirmation—leave a concise handoff so the next session can continue naturally.
+
+## Who it is for
+
+**If you are new to desktop Agents**, it helps turn an early idea or a newly started piece of work into a project with a clear goal, file structure, current state, and next action. You do not need to design a project-file system before you begin.
+
+**If you use desktop Agents heavily**, it does not ask you to migrate tools, rewrite existing material, or copy project facts into another platform. It helps the Agent respect your existing structure and sources of truth while maintaining continuity across sessions, weeks, and months.
+
+It is especially useful for starting and sustaining non-code work: client delivery, content production, consulting, research, operations, learning, and personal plans. It can support code projects too, but its design focus is real work that lacks mature engineering scaffolding and still needs long-term collaboration.
+
+## Not a traditional project-management app
+
+It does not provide task boards or Gantt charts, and it does not replace Notion, Lark, or your project files. It runs in your workspace as a set of installable Skills that enable an Agent to:
+
+- start or take over a project;
+- turn day-to-day updates into an understood current state and next action;
+- assess whether a project structure genuinely supports long-term Agent collaboration;
+- help prioritize across several projects; and
+- preserve confirmed, reusable cross-project lessons as long-term Memory.
+
+Project facts always remain in the project’s own files. Any operation that writes to a file must first be confirmed by you.
 
 ## Model
 
