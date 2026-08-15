@@ -1,6 +1,6 @@
 ---
 name: launch-project
-description: Start a new project, take over someone else's messy one, or give a scattered pile of notes just enough structure to keep going — for client delivery, content operations, research, or long-term personal matters kept in Markdown. Use for “start a new project”, “help me take this over”, “these files are messy; where do I start?”, “I want to keep working on this long term”, or “organize this so it can keep going”; Chinese examples include “我想开个新项目” and “帮我接手这个”. Always answer first with a read-only plan — what is known, what is missing, one concrete next action, and the files it proposes to write — and create or change files only after the user confirms. Use review-project-structure instead when the user only wants an opinion on an existing setup rather than the reorganization carried out.
+description: Start a new project, take over a messy one, or give scattered Markdown notes just enough structure to continue. Use for “start a new project”, “help me take this over”, “these files are messy; where do I start?”, “I want to keep working on this long term”, or “organize this so it can keep going”. Always answer first with a read-only plan and create or change project files only after confirmation. After the project artifacts pass hand-off verification, produce a reviewable Memory route candidate but never write Workspace Memory. Use review-project-structure when the user only wants an opinion rather than reorganization.
 ---
 
 # Launch Project
@@ -86,9 +86,26 @@ After approved writing, use a new session or equivalent isolated context. Give i
 
 Record the result in the approved project location only when that write was included in the confirmation. If the project cannot answer one item, identify the smallest missing link and propose a correction; do not silently expand the structure.
 
+## 6. Hand off a project route candidate
+
+Only after the stable entry and current state exist and pass the path-based hand-off in section 5, produce a project route candidate for Workspace Memory review. The candidate is a read-only conversational hand-off, not approved Memory, and does not authorize this Skill to modify files outside the project.
+
+Include:
+
+1. **Canonical project name** from confirmed project artifacts or a user statement.
+2. **Common aliases** only when the user supplied or confirmed them; otherwise say “not provided”.
+3. The exact **project root** and **stable-entry path**.
+4. **Routing signals**: explicit project names or phrases that should enter this project. Do not infer broad business terms or sensitive entities as triggers.
+5. **Applicable scope and sensitive boundary**: where the route may point and which facts must remain outside Workspace Memory or Portfolio.
+6. **Sources**, including at least the stable entry; label user-supplied aliases or signals as user statements.
+7. **Candidate date and status** using the current date and the exact meaning “candidate — not approved for Memory”. Never invent a confirmation date.
+
+Explain that name-only daily continuation works only after the route is confirmed into Workspace Memory. If the user wants registration, hand the candidate to `bootstrap-workspace` for conflict checking and a separate display of the **target Memory file and exact entry**. Approval to write project files never counts as approval to write Memory. Never write, overwrite, or merge Workspace Memory in this Skill.
+
 ## Safety rules
 
 - Keep user-owned facts in their original source unless explicitly approved for promotion.
 - Mark uncertainty and inferences; a recommendation or review finding is not a project fact.
 - Do not write before confirmation, including empty folders, templates, indexes, or status files.
+- Keep project-write approval separate from Workspace Memory approval; a route candidate is not authorization.
 - End a completed working session by updating only the approved current-state location and stating the next continuation point.

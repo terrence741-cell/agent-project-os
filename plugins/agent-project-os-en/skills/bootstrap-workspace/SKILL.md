@@ -1,6 +1,6 @@
 ---
 name: bootstrap-workspace
-description: Set up or clean up what the Agent should durably remember about the user and their projects — working preferences, standing rules, and where each project lives. Use for “remember this about me”, “stop asking me this every time”, “these are my working preferences”, “help me set up long-term memory”, “set up my workspace for the first time”, “check whether what you remember is still right”, or “organize my long-term preferences”; Chinese examples include “以后记住我…” and “帮我建立长期记忆”. Reads only the folders the user names, sorts findings into keep / add / conflict / private / skip, shows both sides of a conflict instead of picking a winner, and never writes memory without explicit approval of both the target file and the exact entries. Not for reviewing one project's progress or comparing projects.
+description: "Set up or clean up what the Agent should durably remember about the user and their projects: working preferences, standing rules, and project routes. Use for “remember this about me”, “help me set up long-term memory”, “set up my workspace for the first time”, “check whether what you remember is still right”, or “register this project in memory”. Also accepts a route candidate from launch-project and checks its names, paths, source, scope, and conflicts. Reads only user-approved scope and never writes without explicit approval of both the target Memory file and exact entries. Not for reviewing one project's progress or comparing projects."
 ---
 
 # Bootstrap Workspace
@@ -39,6 +39,18 @@ Place each finding in exactly one of these buckets before suggesting any write:
 
 Facts that apply to different scopes are not necessarily a conflict. Label their scopes and ask only if the boundaries remain ambiguous.
 
+### Project route registration mode
+
+When `launch-project` hands off a route candidate, or the user explicitly asks to register a project entry:
+
+1. Confirm that the route is still a candidate and obtain the minimum read authorization needed for the stable entry and target Memory file.
+2. Check the canonical name, user-confirmed aliases, project root, exact stable-entry path, routing signals, applicable scope, sensitive boundary, sources, and candidate date. Keep missing fields missing; do not infer them.
+3. Read the stable entry only to verify its path, project identity, and declared Memory boundary. Do not use that permission to read project bodies or current state, and do not copy project dynamics into Memory.
+4. Check the target Memory for name or alias collisions, duplicate registrations of one path, stale paths, and scope conflicts. Report unresolved conflicts without writing or choosing an interim default.
+5. Adapt one minimal route entry to the target Memory's existing format. Whatever the format, preserve the canonical name and aliases, root and stable-entry paths, applicable scope, source, and this user's confirmation date. Keep the sensitive boundary as a short exclusion or a route to the project contract.
+
+A route entry only helps the host find the project entry. It must not store the current phase, next action, blockers, ownership changes, or other volatile project facts. Without a Workspace Memory route, do not promise name-only project discovery.
+
 ## 4. Report before changing anything
 
 For a read-only pass, return a concise proposal with these sections:
@@ -49,6 +61,8 @@ For a read-only pass, return a concise proposal with these sections:
 4. **Conflicts** — both statements, their sources, impact, and the precise decision needed.
 5. **Do not import** — current state, history, sensitive material, duplicates, and unsupported inferences.
 6. **Proposed next write** — exact target path and exact entries, or “no write proposed.”
+
+For project route registration, also show the candidate source, any duplicate or conflict found, and the resulting “project name / alias → stable entry” relationship. Do not replace the exact entry with a vague promise to “add the project route”.
 
 Never silently resolve a conflict. Do not recommend that either conflicting rule becomes the interim default, including a “safer” or “more conservative” one; mark the rule as unresolved until the user chooses or defines its scope. Never turn a current priority into a permanent rule. Never promise a write until the user has approved its target and contents.
 
@@ -61,6 +75,8 @@ Proceed only when the user confirms both:
 
 Immediately before writing, reread the target within the authorized scope. Make the smallest change that implements the confirmation. Do not overwrite adjacent entries, import a whole document, or include unresolved conflicts or sensitive content.
 
+For a project route, confirmation must occur after this Skill displays the exact entry. Earlier approval of project files, a launch plan, or the route candidate does not substitute for it. Use the actual confirmation date when writing, keep project state inside the project, and avoid creating a duplicate entry for the same path.
+
 Afterward, report the changed paths, entries written, and items intentionally left unresolved. If the user has not confirmed, remain read-only.
 
 ## Guardrails
@@ -71,3 +87,4 @@ Afterward, report the changed paths, entries written, and items intentionally le
 - Do not merge, overwrite, choose between, or assign an interim default to conflicting Memory sources.
 - Keep project execution status in project files unless the user explicitly adopts a durable cross-project rule.
 - Treat the project contract's memory scope as a hard boundary: do not promote facts that the project excludes from workspace Memory or Portfolio.
+- Do not treat a project route candidate as confirmed Memory; review the candidate, target file, and exact entry again in this Skill.
