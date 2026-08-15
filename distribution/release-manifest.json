@@ -19,9 +19,12 @@
   ],
   "required_parity": [
     "six-skill-inventory",
-    "skill-routing",
+    "on-demand-trigger-contract",
+    "first-run-guidance",
+    "skill-handoff",
     "read-write-boundaries",
     "confirmation-gates",
+    "dual-host-marketplace-manifests",
     "manifest-version",
     "license",
     "l0-l4-release-evidence"

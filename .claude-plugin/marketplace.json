@@ -1,0 +1,32 @@
+{
+  "name": "agent-project-os",
+  "owner": {
+    "name": "Agent Project OS"
+  },
+  "description": "On-demand setup and repair for durable Memory and Markdown project structures.",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "agent-project-os",
+      "source": "./plugins/agent-project-os",
+      "description": "按需搭建或检修可续接的 Memory 与 Markdown 项目结构；日常工作不经插件。",
+      "version": "1.0.0",
+      "author": {
+        "name": "Agent Project OS"
+      },
+      "license": "Apache-2.0",
+      "category": "productivity"
+    },
+    {
+      "name": "agent-project-os-en",
+      "source": "./plugins/agent-project-os-en",
+      "description": "Set up or repair durable Memory and Markdown project structures on demand; stay out of daily work.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Agent Project OS"
+      },
+      "license": "Apache-2.0",
+      "category": "productivity"
+    }
+  ]
+}

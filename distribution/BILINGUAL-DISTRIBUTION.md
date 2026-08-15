@@ -20,6 +20,8 @@ The source of truth for Skill behaviour is each canonical Chinese `SKILL.md` und
 The following must remain equivalent across the two packages:
 
 - the six Skill names and their routing relationships;
+- the on-demand trigger boundary and the instruction to stay out of ordinary project work;
+- first-run examples, including the rule that users need not learn Skill names first;
 - read/write boundaries and confirmation gates;
 - required output shapes and safety guardrails;
 - manifest version, license, and compatible host targets;
@@ -49,7 +51,8 @@ Each package contains `skills/`, `.codex-plugin/`, `.claude-plugin/`, `README.md
 2. Set both package versions to the same release version in the manifest.
 3. Localize or refresh the English package from that exact canonical revision.
 4. Check file inventories, Skill names, licenses, and manifest versions.
-5. Run the release-blocking behavioural cases against both language surfaces.
-6. Publish both packages from the same Git tag, or publish neither.
+5. Verify both repository Marketplace manifests and fresh-install guidance for Codex and Claude Code.
+6. Run the release-blocking behavioural cases against both language surfaces.
+7. Publish both packages from the same Git tag, or publish neither.
 
 Wording-only patches still require a parity review. A change to `SKILL.md`, a manifest, or the distribution layout triggers the relevant rows in the regression suite; it does not reset unrelated L2–L4 evidence.

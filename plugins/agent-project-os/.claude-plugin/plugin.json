@@ -1,7 +1,7 @@
 {
   "name": "agent-project-os",
   "version": "1.0.0",
-  "description": "帮助文件系统 Agent 路由、启动、推进、审核并安全续接真实 Markdown 项目。",
+  "description": "按需搭建或检修可续接的 Memory 与 Markdown 项目结构；日常工作不经插件。",
   "author": {
     "name": "Agent Project OS"
   },

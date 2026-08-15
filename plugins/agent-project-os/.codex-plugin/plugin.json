@@ -1,18 +1,21 @@
 {
   "name": "agent-project-os",
   "version": "1.0.0",
-  "description": "帮助文件系统 Agent 路由、启动、推进、审核并安全续接真实 Markdown 项目。",
+  "description": "按需搭建或检修可续接的 Memory 与 Markdown 项目结构；日常工作不经插件。",
   "author": {
     "name": "Agent Project OS"
   },
+  "license": "Apache-2.0",
   "skills": "./skills/",
   "interface": {
     "displayName": "Agent Project OS（中文）",
-    "shortDescription": "让 Agent 项目跨会话持续推进。",
-    "longDescription": "将自然语言项目请求路由至安全工作流；以确认后的启动包开启项目；把日常更新转成可审阅的下一步，而不复制项目事实源。",
+    "shortDescription": "按需搭建记忆与项目结构，完成后回到日常工作。",
+    "longDescription": "在建立长期记忆、启动或接手项目、检查项目结构、审阅多个项目或显式通用状态盘点时，提供可确认的 Markdown 工作流；不确定选择时可直接说明。",
     "developerName": "Agent Project OS",
     "category": "Productivity",
     "capabilities": [],
-    "defaultPrompt": "使用 $project-os 帮我判断一个项目现在该怎么推进。"
+    "defaultPrompt": [
+      "告诉我你想搭建记忆、启动或整理项目、检查单项目结构、比较多个项目，还是明确做一次通用状态盘点；如果不确定可直接说明。平时继续项目不需要使用本插件。"
+    ]
   }
 }

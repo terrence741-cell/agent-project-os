@@ -1,18 +1,21 @@
 {
   "name": "agent-project-os-en",
   "version": "1.0.0",
-  "description": "Help file-system Agents route, launch, advance, review, and safely resume real Markdown projects.",
+  "description": "Set up or repair durable Memory and Markdown project structures on demand; stay out of daily work.",
   "author": {
     "name": "Agent Project OS"
   },
+  "license": "Apache-2.0",
   "skills": "./skills/",
   "interface": {
     "displayName": "Agent Project OS",
-    "shortDescription": "Keep Agent-led projects moving across sessions.",
-    "longDescription": "Route natural-language project requests to a safe workflow, launch projects with a confirmed startup package, and turn daily updates into reviewable next actions without duplicating project truth.",
+    "shortDescription": "Set up durable Memory and project structure on demand.",
+    "longDescription": "Provide confirmable Markdown workflows for long-term Memory setup, project launch or takeover, structure review, portfolio review, or an explicit generic status review; users may simply say when they are unsure.",
     "developerName": "Agent Project OS",
     "category": "Productivity",
     "capabilities": [],
-    "defaultPrompt": "Use $project-os to help me decide what to do with a project."
+    "defaultPrompt": [
+      "Help me set up or repair Memory or project structure. If unsure, help me choose. Skip this plugin for ordinary continuation."
+    ]
   }
 }
