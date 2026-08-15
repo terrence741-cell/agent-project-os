@@ -1,6 +1,6 @@
 ---
 name: review-project-structure
-description: Read-only second opinion on how one existing non-code project kept in Markdown is organized — client delivery, content operations, research, or long-term personal matters. Could a stranger, or a fresh Agent session, open it cold and tell what it is for, find the current status, and safely continue? Use for “is this project structure sensible?”, “where should these files go?”, “does the way I keep these notes work?”, or “will I be able to find my way back next time?”; Chinese examples include “这个项目结构合理吗” and “文件该怎么放”. Returns keep / change / ignore with exact paths as evidence; where a change is warranted it proposes the smallest one, and "keep it as it is" is a complete answer for a structure that already works. It never moves, renames, or rewrites anything. This reviews how the work is organized, not whether the work is still worth doing — say so plainly when the user is really asking about direction, scope, or whether to continue. Not for code repositories or source trees. Use launch-project instead when the user wants the reorganization actually carried out.
+description: "Give a read-only second opinion on how one existing non-code Markdown project is organized. Use only when the user clearly asks to inspect its entry, source of current state, file organization, or fresh-session resumability, such as “is this project structure sensible?”, “where should these files go?”, “does the way I keep these notes work?”, or “will I find my way back next time?”. Return keep / change / ignore with exact paths as evidence and never move, rename, or rewrite anything. Do not capture “continue this project”, “what should I do today?”, or other daily work, and do not judge direction, scope, or whether to continue. Not for code repositories. After approval, launch-project may carry out a precise minimal repair."
 ---
 
 # Review Project Structure
@@ -57,4 +57,4 @@ Do not propose a change merely because a project differs from this Skill’s ter
 
 ## 5. Close safely
 
-State the smallest next action. If the user wants any proposed Change implemented, first show the exact target path, intended edit, source-of-truth impact, and ask for explicit approval. Run a fresh-session resumption check only after approved edits; it is not part of a read-only review.
+State the smallest next action. If the user wants a proposed Change implemented, show the exact target path, intended edit, and source-of-truth impact, then hand it to `launch-project`'s minimal-repair flow for separate confirmation and execution; this Skill remains read-only. A fresh-session resumption check after repair belongs to that execution flow or another explicit request, not this Review.

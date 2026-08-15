@@ -1,4 +1,4 @@
 interface:
   display_name: "项目操作系统"
-  short_description: "立即启动适合此项目的工作流。"
-  default_prompt: "使用 $project-os 为这个项目选择并启动合适的工作流。"
+  short_description: "仅在用户不确定时，帮助选择一项项目搭建或检修能力。"
+  default_prompt: "使用 $project-os 在我明确不确定时，从项目搭建与检修能力中选择一项。"

@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Check-in"
-  short_description: "Turn a project update into the next safe action."
-  default_prompt: "Use $project-check-in to process this update and propose the smallest confirmed state update."
+  short_description: "Create a reviewable state proposal on request."
+  default_prompt: "Use $project-check-in for an explicit generic check-in and propose a reviewable state change first."

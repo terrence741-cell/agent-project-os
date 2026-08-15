@@ -1,4 +1,4 @@
 interface:
   display_name: "Project OS"
-  short_description: "Start the right project workflow immediately."
-  default_prompt: "Use $project-os to start the right workflow for this project request."
+  short_description: "Choose a setup or repair Skill when unsure."
+  default_prompt: "Use $project-os when I am explicitly unsure which setup or repair capability fits."
