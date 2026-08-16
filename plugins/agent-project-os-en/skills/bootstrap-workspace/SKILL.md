@@ -1,6 +1,6 @@
 ---
 name: bootstrap-workspace
-description: "Set up or clean up what the Agent should durably remember about the user and their projects: working preferences, standing rules, and project routes. Use for “remember this about me”, “help me set up long-term memory”, “set up my workspace for the first time”, “check whether what you remember is still right”, or “register this project in memory”. Also accepts a route candidate from launch-project and checks its names, paths, source, scope, and conflicts. Reads only user-approved scope and never writes without explicit approval of both the target Memory file and exact entries. Not for reviewing one project's progress or comparing projects."
+description: "Set up or clean up what the Agent should durably remember about the user and their projects: working preferences, standing rules, and project routes. Use for “remember this about me”, “help me set up long-term memory”, “set up my workspace for the first time”, “have Codex and Claude Code share one Memory”, “check whether what you remember is still right”, or “register this project in memory”. For a new user, it can propose a standard preset with one physical shared-memory store, a thin index, topic files created on demand, two host entry points, and local Git recovery. It also accepts route candidates from launch-project. It reads only user-approved scope and never writes without explicit approval of exact targets and contents. Not for reviewing one project's progress or comparing projects."
 ---
 
 # Bootstrap Workspace
@@ -25,6 +25,14 @@ Start with the smallest useful set: an explicit Memory file, project index, work
 Do not read project bodies, archives, chats, credentials, or personal/private folders unless the user explicitly includes them. Do not treat a filename or an inferred convention as evidence.
 
 The target Memory path and organization are part of the user's boundary too. When the user names one exact target file, keep every proposed entry within that file; do not add indexes, topic files, or directories unless the user explicitly asks for a multi-file architecture. Never treat the host Agent's automatic-memory directory, internal index format, or local-machine convention as a Memory architecture the user already chose. Naming a write target does not authorize reading or probing it; directory listings, globs, searches, and existence checks all count as reads. If the target file or directory is not authorized for reading, perform none of those checks and do not claim to know its format or whether it exists. You may propose a conservative entry confined to that target and list a pre-write reread of the same target as the minimum permission still needed.
+
+Treat the exact user-approved read paths as a hard allowlist and check it before every read. Merely naming a path as a write target, host entry point, exclusion, or candidate does not add it to that allowlist. In the first read-only proposal, never attempt to read a write-only target even to determine whether it exists. Label it explicitly as “not authorized for inspection; current state unknown.”
+
+### Choose the Memory mode
+
+- When the user names one exact Memory file, use single-target mode. Do not load or propose the shared preset.
+- When the user is new, asks for a long-term Memory system, or explicitly wants Codex and Claude Code to share one Memory, read [Standard shared Memory preset](references/shared-memory-preset.md) in full before proposing a design.
+- When the user already has a Memory system, assess only the authorized scope and show the difference between keeping it, minimally cleaning it up, and migrating to the shared preset. Do not migrate by default.
 
 ## 3. Classify every finding
 
@@ -79,6 +87,8 @@ Immediately before writing, reread the target within the authorized scope. Make 
 
 For a project route, confirmation must occur after this Skill displays the exact entry. Earlier approval of project files, a launch plan, or the route candidate does not substitute for it. Use the actual confirmation date when writing, keep project state inside the project, and avoid creating a duplicate entry for the same path.
 
+For the shared preset, list exact changes separately for Memory content, the physical directory and topic files, the two host entry points, global host rules, proven host read/write permission changes, and Git actions. One confirmation may cover several items only when the user explicitly names and approves those items. Approval of Memory content does not automatically authorize symlink creation, global-rule changes, host permission changes, or Git initialization.
+
 Afterward, report the changed paths, entries written, and items intentionally left unresolved. If the user has not confirmed, remain read-only.
 
 ## Guardrails
@@ -91,3 +101,5 @@ Afterward, report the changed paths, entries written, and items intentionally le
 - Keep project execution status in project files unless the user explicitly adopts a durable cross-project rule.
 - Treat the project contract's memory scope as a hard boundary: do not promote facts that the project excludes from workspace Memory or Portfolio.
 - Do not treat a project route candidate as confirmed Memory; review the candidate, target file, and exact entry again in this Skill.
+- Do not create two Memory copies and synchronize them by mirroring, copying, or dual writes. Both hosts must ultimately point to one physical store.
+- Do not force-replace links, delete existing targets, overwrite global rules, add a Git remote, or push automatically.

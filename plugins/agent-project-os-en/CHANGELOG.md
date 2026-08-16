@@ -2,6 +2,13 @@
 
 All notable changes to Agent Project OS are documented here.
 
+## 1.0.2 — 2026-08-16
+
+- Added a standard shared Memory preset for new users: one physical store, a thin `MEMORY.md`, topic files created on demand, and Codex / Claude Code entry points.
+- Added local Git recovery boundaries, minimal host-rule merges, and evidence-first permission proposals separated by host and read/write operation.
+- Preserved exact single-file targets as higher priority; the preset never expands a user boundary unless a multi-file system is requested.
+- Prohibited mirrored copies, dual-write synchronization, and force-replacing existing links or global host rules.
+
 ## 1.0.1 — 2026-08-16
 
 - Narrowed the product to on-demand setup and repair; ordinary project work no longer routes through the plugin.

@@ -21,6 +21,7 @@ After installing one language package, describe the setup or repair you need in 
 
 ```text
 Help me set up long-term Memory for my work and projects.
+Set up one long-term Memory that Codex and Claude Code can share.
 Start a new research project and give it a structure a fresh Agent can resume.
 Organize these scattered notes into a maintainable project.
 Review this project's structure; do not edit anything yet.
@@ -28,6 +29,8 @@ Compare these four projects and tell me which one is blocked.
 ```
 
 Read-only workflows may inspect files within a supplied or authorized scope. Before any write, the Agent shows the exact target and proposed content. Project files and Workspace Memory have separate confirmation gates. A new project's Memory route is only a proposal until you approve that exact Memory change.
+
+For a new user, the default proposal is one tool-neutral physical store at `~/.agent-project-os/shared-memory/`. A thin `MEMORY.md` routes to confirmed user, team, project, feedback, and reference topic files created only when needed. Thin Codex and Claude Code entry points reach the same physical store; the system never pretends that copying or dual writes are synchronization. Paths, files, host rules, links, proven host read/write permissions, and local Git recovery are listed as separate exact changes before you approve them.
 
 ## Packages
 
@@ -38,7 +41,7 @@ Read-only workflows may inspect files within a supplied or authorized scope. Bef
 
 Do not install both; they deliberately expose the same Skill names.
 
-This branch is a V1.0.1 release candidate. Both repository Marketplace manifests are present, but the final public GitHub installation commands will be published only after they have been tested from the real repository URL in fresh Codex and Claude Code environments. Until then, use the host's local Marketplace/source flow with this repository and select exactly one package.
+This branch is a V1.0.2 release candidate. Both repository Marketplace manifests are present, but the final public GitHub installation commands will be published only after they have been tested from the real repository URL in fresh Codex and Claude Code environments. Until then, use the host's local Marketplace/source flow with this repository and select exactly one package.
 
 Package details:
 

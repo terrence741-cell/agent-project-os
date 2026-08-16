@@ -2,11 +2,12 @@
 
 [中文包](../agent-project-os/README.md) · [Bilingual distribution contract](../../distribution/BILINGUAL-DISTRIBUTION.md)
 
-Agent Project OS is an on-demand project setup and repair toolkit. It helps file-system Agents such as Codex and Claude Code establish durable Memory, launch or organize Markdown projects, and check whether a fresh session can resume them. Once the structure works, the plugin should disappear from normal work; the host Agent reads Memory and project files directly.
+Agent Project OS is an on-demand project setup and repair toolkit. It helps file-system Agents such as Codex and Claude Code establish a durable work system built around one physical Memory store, a thin top-level index, topic files created on demand, and stable project entries. Once the structure works, the plugin should disappear from normal work; the host Agent reads Memory and project files directly.
 
 ## Use it at these moments
 
 - setting up long-term Memory for stable preferences, boundaries, and project locations;
+- having Codex and Claude Code share the same physical Memory instead of maintaining two copies;
 - starting a project, taking over someone else's project, or organizing scattered notes;
 - repairing a confusing project entry, current-status file, or source-of-truth layout;
 - explicitly requesting a read-only structure review;
@@ -35,6 +36,7 @@ You do not need to memorize Skill names. Describe the real need after installati
 
 ```text
 Help me set up long-term Memory for how I work and where my projects live.
+Set up one long-term Memory that Codex and Claude Code can share.
 Start a client-delivery project that a fresh session can resume next time.
 These materials are scattered across folders; organize them into a project.
 Review this project's structure, but do not edit anything yet.
@@ -59,12 +61,14 @@ Only that explicit uncertainty calls for the low-frequency `project-os` router.
 - Project status, temporary blockers, client details, and sensitive facts remain in the project rather than long-term Memory.
 - Without a project path, the plugin does not pretend it checked the project or invent ordinary day-to-day project action.
 - For strict path-only continuation, `launch-project` separately proposes Codex `AGENTS.md` or Claude Code `CLAUDE.md`. Each only routes to the same stable entry, never copies project status, and still requires confirmation before writing.
+- The standard preset for a new user has only one physical Memory store. Codex and Claude Code entry points reach that store; the plugin never creates mirrored copies or dual-write backends.
+- Memory content, the physical directory, host entry points, global rules, proven host read/write permissions, and local Git actions are listed separately. No unapproved scope is executed.
 
 ## Install
 
 This package is named `agent-project-os-en` and is intended for English working sessions. Do not install it together with `agent-project-os`; both packages expose the same Skill names.
 
-This is a V1.0.1 release candidate. Package manifests for Codex and Claude Code are present. Final GitHub installation commands will be documented only after fresh-install testing against the real public repository URL on both hosts. For now, add the repository root through the host's local Marketplace/plugin-source flow and select `agent-project-os-en`.
+This is a V1.0.2 release candidate. Package manifests for Codex and Claude Code are present. Final GitHub installation commands will be documented only after fresh-install testing against the real public repository URL on both hosts. For now, add the repository root through the host's local Marketplace/plugin-source flow and select `agent-project-os-en`.
 
 The Skills are Markdown instructions under `skills/`; they include no background service or automatic network request. The host Agent may still read or modify workspace files within the scope you approve.
 
@@ -81,6 +85,6 @@ The Skills are Markdown instructions under `skills/`; they include no background
 
 ## Status
 
-V1.0.1 release candidate. Package structure, bilingual behaviour, on-demand triggering, Memory route handoff, and safety boundaries have passed local validation. Fresh GitHub installation on both hosts and trials with unfamiliar users remain release gates; this package is not claimed as publicly ready yet.
+V1.0.2 release candidate. Package structure, bilingual behaviour, on-demand triggering, Memory route handoff, and safety boundaries have passed static validation. The shared Memory preset has passed local isolated sessions on both real hosts, on-demand reads, and permission contrasts. Fresh GitHub 1.0.2 installation on both hosts, the complete A–F matrix, and trials with unfamiliar users remain release gates; this package is not claimed as publicly ready yet.
 
 Apache-2.0. See [LICENSE](LICENSE).

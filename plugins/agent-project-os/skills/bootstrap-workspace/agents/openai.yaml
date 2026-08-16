@@ -1,4 +1,4 @@
 interface:
   display_name: "初始化工作区"
-  short_description: "梳理工作区，且不覆盖既有 Memory。"
-  default_prompt: "使用 $bootstrap-workspace 审阅此工作区，并提出安全的 Agent Memory 设置方案。"
+  short_description: "搭建可由 Codex 与 Claude Code 共用的长期 Memory。"
+  default_prompt: "使用 $bootstrap-workspace 为我提议一套可审阅、可恢复的共享长期 Memory。"

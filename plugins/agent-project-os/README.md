@@ -2,11 +2,12 @@
 
 [English package](../agent-project-os-en/README.md) · [双语分发契约](../../distribution/BILINGUAL-DISTRIBUTION.zh-CN.md)
 
-Agent Project OS 是一套按需使用的项目搭建与检修工具。它帮助 Codex、Claude Code 等文件系统型 Agent 建立长期 Memory、启动或整理 Markdown 项目，并检查结构是否能被全新会话续接。结构建立后，插件应当隐身；日常工作由宿主 Agent 直接读取 Memory 和项目文件完成。
+Agent Project OS 是一套按需使用的项目搭建与检修工具。它帮助 Codex、Claude Code 等文件系统型 Agent 按“单一物理 Memory 库、薄总索引、按需主题文件、项目稳定入口”的方法建立长期工作系统，并检查结构是否能被全新会话续接。结构建立后，插件应当隐身；日常工作由宿主 Agent 直接读取 Memory 和项目文件完成。
 
 ## 适合这些时刻
 
 - 第一次建立长期 Memory，整理稳定偏好、边界与项目位置；
+- 想让 Codex 与 Claude Code 共用同一物理 Memory，不再维护两份副本；
 - 启动新项目、接手别人的项目，或把散落笔记整理成项目；
 - 现有项目的入口、状态文件或事实来源已经混乱；
 - 明确要求只读审查一个项目的结构；
@@ -35,6 +36,7 @@ Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳�
 
 ```text
 帮我建立长期记忆，记住我的工作方式和各项目位置。
+帮我从零搭建一套 Codex 和 Claude Code 共用的长期 Memory。
 帮我启动一个客户交付项目，做成下次新会话也能接手的结构。
 这些资料散在几个文件夹里，帮我整理成一个项目。
 检查这个项目的结构，先只给意见，不要修改。
@@ -59,12 +61,14 @@ Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳�
 - 项目进展、临时阻塞、客户细节与敏感事实留在项目内，不提升为长期 Memory。
 - 没有项目路径时，不假装已核对项目，也不替项目生成普通日常行动。
 - 若要求严格的路径续接，`launch-project` 会单独提议 Codex `AGENTS.md` 或 Claude Code `CLAUDE.md`；它们只路由到同一稳定入口，不复制项目状态，仍需用户确认后写入。
+- 全新用户的标准 Memory preset 默认只有一个物理库；Codex 与 Claude Code 入口指向该库，不创建镜像、副本或双写后端。
+- Memory 内容、物理目录、双宿主入口、全局规则、已实证需要的宿主读写权限和本地 Git 操作分开列出；未明确批准的范围不执行。
 
 ## 安装
 
 本包名称是 `agent-project-os`，适用于中文工作界面。不要与 `agent-project-os-en` 同时安装，因为两包暴露相同的 Skill 名。
 
-当前是 V1.0.1 发布候选：Codex 和 Claude Code 的包清单均已提供；最终 GitHub 安装命令将在真实公开仓库 URL 上完成双端全新安装测试后写入。现阶段请通过宿主的本地 Marketplace／插件源流程添加仓库根目录，并选择 `agent-project-os`。
+当前是 V1.0.2 发布候选：Codex 和 Claude Code 的包清单均已提供；最终 GitHub 安装命令将在真实公开仓库 URL 上完成双端全新安装测试后写入。现阶段请通过宿主的本地 Marketplace／插件源流程添加仓库根目录，并选择 `agent-project-os`。
 
 Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网络请求。宿主 Agent 仍会按照你批准的范围读取或修改工作区文件。
 
@@ -81,6 +85,6 @@ Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网�
 
 ## 状态
 
-V1.0.1 发布候选。包结构、双语行为、按需触发、Memory 路由交接与安全边界已通过本地验证；真实 GitHub 双端首次安装和陌生用户试用仍是发布门禁，不宣称已经公开可用。
+V1.0.2 发布候选。包结构、双语行为、按需触发、Memory 路由交接与安全边界已通过静态验证；共享 Memory preset 已通过本地真实双宿主隔离会话、按需读取与权限对照。真实 GitHub 1.0.2 双端安装、完整 A–F 和陌生用户试用仍是发布门禁，不宣称已经公开可用。
 
 Apache-2.0。见 [LICENSE](LICENSE)。
