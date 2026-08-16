@@ -38,7 +38,7 @@ Read-only workflows may inspect files within a supplied or authorized scope. Bef
 
 Do not install both; they deliberately expose the same Skill names.
 
-This branch is a V1.0.0 release candidate. Both repository Marketplace manifests are present, but the final public GitHub installation commands will be published only after they have been tested from the real repository URL in fresh Codex and Claude Code environments. Until then, use the host's local Marketplace/source flow with this repository and select exactly one package.
+This branch is a V1.0.1 release candidate. Both repository Marketplace manifests are present, but the final public GitHub installation commands will be published only after they have been tested from the real repository URL in fresh Codex and Claude Code environments. Until then, use the host's local Marketplace/source flow with this repository and select exactly one package.
 
 Package details:
 

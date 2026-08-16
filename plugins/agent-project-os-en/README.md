@@ -63,7 +63,7 @@ Only that explicit uncertainty calls for the low-frequency `project-os` router.
 
 This package is named `agent-project-os-en` and is intended for English working sessions. Do not install it together with `agent-project-os`; both packages expose the same Skill names.
 
-This is a V1.0.0 release candidate. Package manifests for Codex and Claude Code are present. Final GitHub installation commands will be documented only after fresh-install testing against the real public repository URL on both hosts. For now, add the repository root through the host's local Marketplace/plugin-source flow and select `agent-project-os-en`.
+This is a V1.0.1 release candidate. Package manifests for Codex and Claude Code are present. Final GitHub installation commands will be documented only after fresh-install testing against the real public repository URL on both hosts. For now, add the repository root through the host's local Marketplace/plugin-source flow and select `agent-project-os-en`.
 
 The Skills are Markdown instructions under `skills/`; they include no background service or automatic network request. The host Agent may still read or modify workspace files within the scope you approve.
 
@@ -80,6 +80,6 @@ The Skills are Markdown instructions under `skills/`; they include no background
 
 ## Status
 
-V1.0.0 release candidate. Package structure, bilingual behaviour, on-demand triggering, Memory route handoff, and safety boundaries have passed local validation. Fresh GitHub installation on both hosts and trials with unfamiliar users remain release gates; this package is not claimed as publicly ready yet.
+V1.0.1 release candidate. Package structure, bilingual behaviour, on-demand triggering, Memory route handoff, and safety boundaries have passed local validation. Fresh GitHub installation on both hosts and trials with unfamiliar users remain release gates; this package is not claimed as publicly ready yet.
 
 Apache-2.0. See [LICENSE](LICENSE).

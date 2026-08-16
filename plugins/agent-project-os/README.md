@@ -63,7 +63,7 @@ Workspace Memory → 项目稳定入口 → 当前状态事实源 → 宿主 Age
 
 本包名称是 `agent-project-os`，适用于中文工作界面。不要与 `agent-project-os-en` 同时安装，因为两包暴露相同的 Skill 名。
 
-当前是 V1.0.0 发布候选：Codex 和 Claude Code 的包清单均已提供；最终 GitHub 安装命令将在真实公开仓库 URL 上完成双端全新安装测试后写入。现阶段请通过宿主的本地 Marketplace／插件源流程添加仓库根目录，并选择 `agent-project-os`。
+当前是 V1.0.1 发布候选：Codex 和 Claude Code 的包清单均已提供；最终 GitHub 安装命令将在真实公开仓库 URL 上完成双端全新安装测试后写入。现阶段请通过宿主的本地 Marketplace／插件源流程添加仓库根目录，并选择 `agent-project-os`。
 
 Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网络请求。宿主 Agent 仍会按照你批准的范围读取或修改工作区文件。
 
@@ -80,6 +80,6 @@ Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网�
 
 ## 状态
 
-V1.0.0 发布候选。包结构、双语行为、按需触发、Memory 路由交接与安全边界已通过本地验证；真实 GitHub 双端首次安装和陌生用户试用仍是发布门禁，不宣称已经公开可用。
+V1.0.1 发布候选。包结构、双语行为、按需触发、Memory 路由交接与安全边界已通过本地验证；真实 GitHub 双端首次安装和陌生用户试用仍是发布门禁，不宣称已经公开可用。
 
 Apache-2.0。见 [LICENSE](LICENSE)。
