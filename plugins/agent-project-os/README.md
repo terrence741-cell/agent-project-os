@@ -24,7 +24,7 @@ Agent Project OS 是一套按需使用的项目搭建与检修工具。它帮助
 日常续接应走：
 
 ```text
-Workspace Memory → 项目稳定入口 → 当前状态事实源 → 宿主 Agent 直接工作
+Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳定入口 → 当前状态事实源 → 宿主 Agent 直接工作
 ```
 
 这条链路一旦可用，就不需要再次调用 Agent Project OS。
@@ -58,6 +58,7 @@ Workspace Memory → 项目稳定入口 → 当前状态事实源 → 宿主 Age
 - 结构审查默认且始终只读；批准修复后，由 `launch-project` 在另一个明确流程中执行。
 - 项目进展、临时阻塞、客户细节与敏感事实留在项目内，不提升为长期 Memory。
 - 没有项目路径时，不假装已核对项目，也不替项目生成普通日常行动。
+- 若要求严格的路径续接，`launch-project` 会单独提议 Codex `AGENTS.md` 或 Claude Code `CLAUDE.md`；它们只路由到同一稳定入口，不复制项目状态，仍需用户确认后写入。
 
 ## 安装
 

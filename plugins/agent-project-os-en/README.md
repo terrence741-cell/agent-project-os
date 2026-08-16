@@ -24,7 +24,7 @@ Agent Project OS is an on-demand project setup and repair toolkit. It helps file
 Normal continuation should follow:
 
 ```text
-Workspace Memory -> stable project entry -> current-status source -> host Agent works directly
+Workspace Memory or exact project path -> thin host adapter -> stable project entry -> current-status source -> host Agent works directly
 ```
 
 Once that route works, Agent Project OS is not required again.
@@ -58,6 +58,7 @@ Only that explicit uncertainty calls for the low-frequency `project-os` router.
 - Structure review remains read-only. An approved repair is executed later by `launch-project` in a separate, explicit workflow.
 - Project status, temporary blockers, client details, and sensitive facts remain in the project rather than long-term Memory.
 - Without a project path, the plugin does not pretend it checked the project or invent ordinary day-to-day project action.
+- For strict path-only continuation, `launch-project` separately proposes Codex `AGENTS.md` or Claude Code `CLAUDE.md`. Each only routes to the same stable entry, never copies project status, and still requires confirmation before writing.
 
 ## Install
 

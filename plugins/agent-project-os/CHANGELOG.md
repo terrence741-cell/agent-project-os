@@ -9,6 +9,7 @@
 - 重写首次使用与 Skill 参考，用户无需先学习 `project-os`。
 - 补齐 Codex 与 Claude Code 的双语仓库 Marketplace 清单。
 - 修复显式 Memory 目标边界：不再套用宿主内部记忆布局，也不在未授权时枚举或探测目标目录。
+- 为严格路径续接增加薄宿主适配入口合同：Codex `AGENTS.md`、Claude Code `CLAUDE.md` 只路由到同一稳定入口，不复制项目状态。
 
 ## 1.0.0 — 2026-07-31
 

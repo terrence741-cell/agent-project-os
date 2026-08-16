@@ -9,6 +9,7 @@ All notable changes to Agent Project OS are documented here.
 - Rewrote first-run guidance and Skill reference so users need not learn `project-os` first.
 - Completed bilingual repository Marketplace manifests for Codex and Claude Code.
 - Fixed explicit Memory target boundaries: do not impose host-internal layouts or probe unapproved target directories.
+- Added thin host-adapter contracts for strict path-only continuation: Codex `AGENTS.md` and Claude Code `CLAUDE.md` route to one stable entry without copying project status.
 
 ## 1.0.0 — 2026-07-31
 

@@ -51,8 +51,10 @@
 真正留下来的不是一个永远在线的路由器，而是一组宿主 Agent 不依赖本插件也能读取的普通文件：
 
 ```text
-Workspace Memory → 项目稳定入口 → 当前状态事实源 → Agent 日常工作
+Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳定入口 → 当前状态事实源 → Agent 日常工作
 ```
+
+若要求严格的“只给项目路径”续接，`launch-project` 会提议最小根级适配器：Codex 使用 `AGENTS.md`，Claude Code 使用 `CLAUDE.md`。它们只指向同一个工具中立稳定入口，并要求宿主先读入口再扫描；不保存项目状态。
 
 只有当这套结构需要创建、检查或修复时，再调用 Agent Project OS。
 

@@ -25,7 +25,7 @@ Include only the sections useful to the situation:
 2. **Provisional three-dimensional classification** — state working form (goal-oriented, operational, or mixed), service protocol (delivery progress, continuous operation, long-term companionship), and maturity (blank concept, scattered materials, runnable but messy, or mature/resumable). Give a short reason for each and label unsupported parts provisional.
 3. **Key gaps** — ask only for facts that change safety, structure, or the next action. A gap is non-blocking if it can safely remain unresolved in the current-state record.
 4. **First action** — recommend one concrete, reversible next move that produces value before a complete system exists.
-5. **Proposed artifacts** — list the minimum creates/changes with exact paths when a target path is known; otherwise show path patterns and state that final paths require confirmation. For each artifact, give purpose and whether it is a stable rule source, current-state source, or only a route to existing evidence. The proposed stable entry must name the project's read scope, sensitive-content boundary, and what may never be promoted to workspace Memory or Portfolio.
+5. **Proposed artifacts** — list the minimum creates/changes with exact paths when a target path is known; otherwise show path patterns and state that final paths require confirmation. For each artifact, give purpose and whether it is a stable rule source, current-state source, or only a route to existing evidence. The proposed stable entry must name the project's read scope, sensitive-content boundary, and what may never be promoted to workspace Memory or Portfolio. When the user requires safe path-only continuation in Codex or Claude Code, also propose a thin root adapter for each selected host: `AGENTS.md` for Codex and `CLAUDE.md` for Claude Code. An adapter only points to the same tool-neutral stable entry and says to read it first, stop pre-entry scanning, and obey its boundaries; it must not copy the objective, status, or next step. If an adapter already exists, read it and propose a minimal merge; never overwrite it.
 6. **Confirmation gate** — ask for explicit approval of the target path, boundaries, and listed writes. Combine this with only the smallest blocking questions.
 
 Do not invent cadence, owner, metrics, workflow, platform, volume, health facts, or other user-owned facts. Mark assumptions as assumptions. Do not ask a fixed questionnaire or require every future-useful detail before proposing a safe minimum.
@@ -68,15 +68,16 @@ After confirmation:
 
 1. Re-check the target path for changes that affect the proposal.
 2. Create or modify only approved artifacts.
-3. Keep stable rules in the stable entry, current facts and next action in the authoritative current-state record, and source locations as routes rather than copied facts. In the stable entry, state the project's memory scope: readable project boundary, sensitive-content exclusions, and any permitted path for a future Memory candidate.
-4. Add non-blocking unknowns to that current-state record; do not scatter them into reviews, retrospectives, or source notes.
-5. Report exact changed paths, actual changes, and any departure from the approved proposal.
+3. Keep stable rules in the stable entry, current facts and next action in the authoritative current-state record, and source locations as routes rather than copied facts. Put read boundaries and stop rules at the top of the stable entry, before state and material routes: once the host finds the entry, it must stop broad directory enumeration and follow only paths the entry marks necessary for the current request; it must never open an excluded file or directory for verification, contradiction hunting, or completeness. Also state the project's memory scope: readable project boundary, sensitive-content exclusions, and any permitted path for a future Memory candidate.
+4. When host adapters were approved, write only their minimal route and pre-entry boundary. If both Codex and Claude Code are in scope, `AGENTS.md` and `CLAUDE.md` must point to the same stable entry.
+5. Add non-blocking unknowns to that current-state record; do not scatter them into reviews, retrospectives, or source notes.
+6. Report exact changed paths, actual changes, and any departure from the approved proposal.
 
 Never overwrite Memory or existing project state as part of launch. Never batch-restructure, delete, move, or perform external actions.
 
 ## 5. Verify a fresh-session hand-off
 
-After approved writing, use a new session or equivalent isolated context. Give it only the project path and ask it to identify:
+After approved writing, test each user-selected host in a new session or equivalent isolated context with the Project OS plugin disabled. Give it only the project path and ask it to identify:
 
 1. objective;
 2. current state;
@@ -85,6 +86,10 @@ After approved writing, use a new session or equivalent isolated context. Give i
 5. boundaries it must not cross, including project-memory scope and sensitive-content exclusions.
 
 Record the result in the approved project location only when that write was included in the confirmation. If the project cannot answer one item, identify the smallest missing link and propose a correction; do not silently expand the structure.
+
+Before recording a pass, inspect the test's actual read chain. It must not enter excluded paths or open material early when the entry says “read only during execution”. Merely ignoring out-of-scope content in the answer is not a pass; any out-of-bound read fails the hand-off and requires correcting the entry or discovery method.
+
+If the target host did not preload its adapter, or the user did not approve creating one, do not promise strict path-only boundary enforcement. Report the adapter as a missing continuation condition instead of treating an accidental success as a pass.
 
 ## 6. Hand off a project route candidate
 

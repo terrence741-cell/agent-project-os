@@ -51,8 +51,10 @@ Package details:
 The useful result is not a permanently active router. It is a small set of ordinary files the host Agent can use without this plugin:
 
 ```text
-Workspace Memory -> stable project entry -> current-status source -> ordinary Agent work
+Workspace Memory or exact project path -> thin host adapter -> stable project entry -> current-status source -> ordinary Agent work
 ```
+
+For strict path-only continuation, `launch-project` may propose a minimal root adapter: `AGENTS.md` for Codex and `CLAUDE.md` for Claude Code. Each only points to the same tool-neutral stable entry and tells the host to read it before scanning; it never stores project status.
 
 Call Project OS again only when that structure needs to be created, reviewed, or repaired.
 
