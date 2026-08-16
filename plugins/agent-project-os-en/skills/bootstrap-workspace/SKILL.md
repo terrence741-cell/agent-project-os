@@ -24,6 +24,8 @@ Start with the smallest useful set: an explicit Memory file, project index, work
 
 Do not read project bodies, archives, chats, credentials, or personal/private folders unless the user explicitly includes them. Do not treat a filename or an inferred convention as evidence.
 
+The target Memory path and organization are part of the user's boundary too. When the user names one exact target file, keep every proposed entry within that file; do not add indexes, topic files, or directories unless the user explicitly asks for a multi-file architecture. Never treat the host Agent's automatic-memory directory, internal index format, or local-machine convention as a Memory architecture the user already chose. Naming a write target does not authorize reading or probing it; directory listings, globs, searches, and existence checks all count as reads. If the target file or directory is not authorized for reading, perform none of those checks and do not claim to know its format or whether it exists. You may propose a conservative entry confined to that target and list a pre-write reread of the same target as the minimum permission still needed.
+
 ## 3. Classify every finding
 
 Place each finding in exactly one of these buckets before suggesting any write:
@@ -57,10 +59,10 @@ For a read-only pass, return a concise proposal with these sections:
 
 1. **Authorized sources inspected** — exact paths and any excluded areas.
 2. **Keep** — stable information already in the right home.
-3. **Candidate additions** — proposed minimal entries, each with source, applicable scope, confirmation or latest-review date, and reason.
+3. **Candidate additions** — proposed minimal entries, each with source, applicable scope, confirmation or latest-review date, and reason. Put those traceability fields inside the exact proposed entry, or map them explicitly to equivalent fields already present in the target Memory; do not leave them only in commentary outside the entry.
 4. **Conflicts** — both statements, their sources, impact, and the precise decision needed.
 5. **Do not import** — current state, history, sensitive material, duplicates, and unsupported inferences.
-6. **Proposed next write** — exact target path and exact entries, or “no write proposed.”
+6. **Proposed next write** — exact target path and exact entries, or “no write proposed.” List only targets the user named or explicitly accepted; do not expand the file set merely to match the host's Memory layout.
 
 For project route registration, also show the candidate source, any duplicate or conflict found, and the resulting “project name / alias → stable entry” relationship. Do not replace the exact entry with a vague promise to “add the project route”.
 
@@ -82,6 +84,7 @@ Afterward, report the changed paths, entries written, and items intentionally le
 ## Guardrails
 
 - Do not create a global Memory by copying every project or chat.
+- Do not impose the host Agent's internal automatic-memory path or default index layout on a user-specified Memory target.
 - Do not scan beyond the authorized scope.
 - Do not copy secrets, personal data, or unclear confidential content.
 - Do not merge, overwrite, choose between, or assign an interim default to conflicting Memory sources.
