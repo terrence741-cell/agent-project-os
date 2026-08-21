@@ -2,6 +2,10 @@
 
 All notable changes to Agent Project OS are documented here.
 
+## Unreleased
+
+- Renamed `project-check-in` to `state-handoff` to reduce false positives for daily continuation requests such as “what should I do today?”.
+
 ## 1.0.2 — 2026-08-16
 
 - Added a standard shared Memory preset for new users: one physical store, a thin `MEMORY.md`, topic files created on demand, and Codex / Claude Code entry points.

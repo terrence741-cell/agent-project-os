@@ -1,4 +1,0 @@
-interface:
-  display_name: "项目 Check-in"
-  short_description: "仅在明确请求时，将一次项目更新转成可审阅的状态提案。"
-  default_prompt: "使用 $project-check-in 对这个项目做一次明确的通用 check-in，并先提出可审阅的状态修改。"

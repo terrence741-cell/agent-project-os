@@ -1,0 +1,6 @@
+interface:
+  display_name: "状态交接"
+  short_description: "将一次明确更新转成可审阅的状态提案。"
+  default_prompt: "使用 $state-handoff 把这次项目更新整理成可审阅的状态修改提案。"
+policy:
+  allow_implicit_invocation: false

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Project Check-in"
-  short_description: "Create a reviewable state proposal on request."
-  default_prompt: "Use $project-check-in for an explicit generic check-in and propose a reviewable state change first."

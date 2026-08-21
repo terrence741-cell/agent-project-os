@@ -2,6 +2,10 @@
 
 此处记录 Agent Project OS 的所有重要变更。
 
+## Unreleased
+
+- 将 `project-check-in` 改名为 `state-handoff`，降低“今天做什么 / 继续项目”等日常续接请求的误触发风险。
+
 ## 1.0.2 — 2026-08-16
 
 - 对全新用户新增标准共享 Memory preset：单一物理库、薄 `MEMORY.md`、按需主题文件和 Codex / Claude Code 双宿主入口。

@@ -80,7 +80,7 @@ Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网�
 | `launch-project` | 启动、接手或整理一个项目；执行已批准的精确结构修复 |
 | `review-project-structure` | 明确要求只读审查单个项目结构 |
 | `review-portfolio` | 明确要求比较多个项目 |
-| `project-check-in` | 项目没有本地更新流程，且明确要求一次通用状态盘点或直接调用它 |
+| `state-handoff` | 项目没有本地更新流程，且明确要求把一次更新整理成状态交接，或直接调用它 |
 | `project-os` | 明确表示不知道该选哪项 Project OS 能力 |
 
 ## 状态

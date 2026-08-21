@@ -80,7 +80,7 @@ The Skills are Markdown instructions under `skills/`; they include no background
 | `launch-project` | starting, taking over, or organizing a project; applying an approved exact structure repair |
 | `review-project-structure` | explicitly requesting a read-only review of one project's structure |
 | `review-portfolio` | explicitly comparing multiple projects |
-| `project-check-in` | no local update protocol exists and a generic status review is explicitly requested, or the Skill is invoked directly |
+| `state-handoff` | no local update protocol exists and a state handoff for one update is explicitly requested, or the Skill is invoked directly |
 | `project-os` | explicitly unsure which Project OS capability to use |
 
 ## Status

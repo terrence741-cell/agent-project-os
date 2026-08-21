@@ -1,19 +1,19 @@
 ---
-name: project-check-in
-description: "Turn one explicitly requested generic project check-in into a next action and a reviewable state-update proposal. Use only for an explicit $project-check-in invocation, “do a project check-in”, or a clear request to turn one new fact or update into a state hand-off when no more specific local project protocol takes over. Do not capture ordinary continuation for a project that has a Memory route or stable entry: “continue project X”, “what should I do today?”, “update progress”, and “the client changed requirements” follow core Memory and local project rules. Require a project path and read boundary; write nothing before the user confirms the target file and exact content. Not for launching projects, comparing projects, governing Memory, reviewing structure, or judging direction, scope, or whether to continue."
+name: state-handoff
+description: "Automatic invocation is disabled; load only when the user literally enters `$state-handoff` or says “use $state-handoff”. Never use for “what should I do today?”, “continue project X”, “which task is next?”, “show progress”, or ordinary project updates, even when the user says the project is managed with Project OS. Once loaded, create only a reviewable state-change proposal; write nothing before the user confirms the target file and exact content."
 ---
 
-# Project Check-in
+# State Handoff
 
-Only when the user explicitly requests a **generic check-in**, turn a confirmed project update into one next action and a reviewable minimal state change. This is an on-demand maintenance tool, not a daily project entry point.
+Only when the user explicitly requests a **state handoff**, turn a confirmed project update into one next action and a reviewable minimal state change. This is an on-demand maintenance tool, not a daily project entry point.
 
 ## 0. Applicability gate
 
 Before starting, confirm that:
 
-- the user explicitly invoked this Skill or asked for a generic project check-in / state hand-off;
+- the user explicitly invoked this Skill or asked to use `$state-handoff` / turn this update into a state handoff;
 - the project path and allowed read boundary are available; and
-- no more specific local update protocol takes over, or the stable entry explicitly permits a generic check-in.
+- no more specific local update protocol takes over, or the stable entry explicitly permits a generic state handoff.
 
 For ordinary continuation, today's plan, or a progress update, yield to core Memory and the local project protocol instead of running this Skill. If a project has its own update protocol, follow it without imposing this generic output or creating a parallel state source. If the path or read boundary is missing, ask only for that information. Do not read global Memory to guess a location or propose project state without evidence.
 
@@ -46,7 +46,7 @@ Return:
 3. **Watch / decision**: only a material dependency, risk, or owner decision.
 4. **Proposed state update**: target path, exact added or replacement text, source for each new fact, and the minimum needed for a fresh session to resume.
 
-Do not create a daily log, template, second state file, or any parallel source of truth for one check-in.
+Do not create a daily log, template, second state file, or any parallel source of truth for one state handoff.
 
 ## 3. Write only after confirmation
 

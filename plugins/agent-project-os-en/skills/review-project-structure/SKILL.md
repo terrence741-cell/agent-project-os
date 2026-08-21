@@ -1,6 +1,6 @@
 ---
 name: review-project-structure
-description: "Read-only review of the file structure of one existing non-code Markdown project layer, focused on the fresh-session entry and the source of current state. When the user says “check whether this project's files make it easy to pick up next time” or “where do I read the entry and current state from”, or asks the same thing in other words, load this Skill first instead of scanning directly. Still applies when a business project links code assets; out of scope when the review root itself is a source tree. Does not take over daily project work."
+description: "Read-only review of the file structure of one existing non-code Markdown project layer, focused on whether the fresh-session entry and current-state source make resumption easy. When the user clearly asks to inspect whether the project files are organized well, whether the next session can pick it up, or whether the entry/current-state structure should change, load this Skill first instead of scanning directly. Do not trigger this Skill when the user only asks where to read the known project's entry or current state; answer through Memory and the project entry. Still applies when a business project links code assets; out of scope when the review root itself is a source tree. Does not take over daily project work."
 ---
 
 # Review Project Structure

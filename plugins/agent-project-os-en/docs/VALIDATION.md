@@ -17,7 +17,7 @@ bundled here because they are development evidence rather than runtime files.
 
 On 2026-08-15, both language packages were checked against the same boundary.
 Memory setup, project launch or organization, explicit structure review,
-multi-project comparison, explicit check-in, and explicit routing uncertainty
+multi-project comparison, explicit state handoff, and explicit routing uncertainty
 may invoke the relevant capability. Known-project continuation, ordinary
 writing, direction decisions, and a next-step request for one project do not.
 

@@ -1,6 +1,6 @@
 ---
 name: project-os
-description: "When the user explicitly says they want to use Agent Project OS to set up or repair their project system but do not know which capability to choose, load this Skill first; do not answer or start asking on your own. For that explicit, low-frequency help only — it does not take over daily project work, pure business tasks, or requests that already name an atomic Skill."
+description: "Do not use for today's plan, project continuation, progress viewing, or project updating, even when the user says the project is managed with Project OS. Only when the user explicitly wants Agent Project OS to set up or repair their project system but does not know which capability to choose, load this Skill first; do not answer or start asking on your own."
 ---
 
 # Project OS
@@ -18,7 +18,7 @@ Do not use this router for:
 
 - ordinary continuation, today's plan, progress viewing, or status updates for a named project; follow core Memory, the stable project entry, and local project protocols;
 - writing, research, analysis, development, or another concrete business task; leave it to the host Agent or a specialist Skill;
-- requests that already name `bootstrap-workspace`, `launch-project`, `project-check-in`, `review-project-structure`, or `review-portfolio`;
+- requests that already name `bootstrap-workspace`, `launch-project`, `state-handoff`, `review-project-structure`, or `review-portfolio`;
 - a clear atomic need; let its matching Skill activate directly without passing through `project-os`;
 - business judgments about goals, scope, direction, or whether work remains worthwhile; this release has no matching Project OS Skill, so never disguise that request as a structure review.
 
@@ -30,7 +30,7 @@ If the request does not qualify, yield immediately. Read no project or Memory an
 |---|---|
 | Set up, organize, or review long-term Memory, or register a project route | `bootstrap-workspace` |
 | Start or take over a project, or give scattered material a minimal resumable structure | `launch-project` |
-| Perform an explicitly requested generic project check-in where no local protocol takes over | `project-check-in` |
+| Perform an explicitly requested state handoff where no local protocol takes over | `state-handoff` |
 | Inspect one project's entry, sources of truth, file organization, or resumability read-only | `review-project-structure` |
 | Compare multiple projects for blockers, staleness, conflicts, or reuse read-only | `review-portfolio` |
 
@@ -42,7 +42,7 @@ If the help request already points to one capability, read that sibling `SKILL.m
 
 If genuine ambiguity remains, ask one question that separates the candidate paths. For example:
 
-> Do you need to set up long-term memory, start or organize one project, inspect one project's structure, compare several projects, or perform an explicit generic check-in?
+> Do you need to set up long-term memory, start or organize one project, inspect one project's structure, compare several projects, or perform an explicit state handoff?
 
 Each option must be mutually exclusive and map to exactly one existing atomic Skill; never combine single-project and multi-project review, or any other two Skills, into one answer option. Any option the user selects must allow one direct choice without a second distinguishing question.
 

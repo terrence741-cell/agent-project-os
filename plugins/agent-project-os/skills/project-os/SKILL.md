@@ -1,6 +1,6 @@
 ---
 name: project-os
-description: 当用户明确说想用 Agent Project OS 搭建或检修项目体系、但不知道选哪项能力时，先加载本 Skill；不要直接回答或自行提问。仅用于这类显式低频求助，不接管日常项目工作、纯业务任务或已点名原子 Skill 的请求。
+description: 不用于“今天做什么”“继续项目”“看进展”或“更新项目”，即使用户说项目由 Project OS 管着。仅当用户明确想用 Agent Project OS 搭建或检修项目体系、但不知道选哪项能力时，先加载本 Skill；不要直接回答或自行提问。
 ---
 
 # Project OS
@@ -18,7 +18,7 @@ description: 当用户明确说想用 Agent Project OS 搭建或检修项目体�
 
 - 已命名项目的普通续接、今天计划、进展查看或状态更新；服从核心 Memory、项目稳定入口和项目本地协议。
 - 写作、研究、分析、开发等具体业务任务；交还宿主 Agent 或专业 Skill。
-- 用户已经点名 `bootstrap-workspace`、`launch-project`、`project-check-in`、`review-project-structure` 或 `review-portfolio`。
+- 用户已经点名 `bootstrap-workspace`、`launch-project`、`state-handoff`、`review-project-structure` 或 `review-portfolio`。
 - 用户明确提出的原子需求；让对应 Skill 自然匹配，不要求先经过 `project-os`。
 - 目标、范围、方向或“是否值得继续”的业务判断；当前版本没有对应的 Project OS Skill，不得伪装成结构 Review。
 
@@ -30,7 +30,7 @@ description: 当用户明确说想用 Agent Project OS 搭建或检修项目体�
 |---|---|
 | 建立、整理、审阅长期 Memory，或登记项目路由 | `bootstrap-workspace` |
 | 启动新项目、接手项目、为散乱资料补最小可续接结构 | `launch-project` |
-| 明确要求一次通用项目 check-in，且没有项目本地协议接管 | `project-check-in` |
+| 明确要求一次状态交接，且没有项目本地协议接管 | `state-handoff` |
 | 只读检查一个项目的入口、状态源、文件组织或续接能力 | `review-project-structure` |
 | 只读比较多个项目的阻塞、过时、冲突或复用 | `review-portfolio` |
 
@@ -42,7 +42,7 @@ description: 当用户明确说想用 Agent Project OS 搭建或检修项目体�
 
 若仍有真实歧义，只问一个能区分候选路径的问题。例如：
 
-> 你现在更需要搭建长期记忆、启动或整理一个项目、检查单项目结构、比较多个项目，还是做一次明确的通用 check-in？
+> 你现在更需要搭建长期记忆、启动或整理一个项目、检查单项目结构、比较多个项目，还是做一次明确的状态交接？
 
 问题中的每个选项必须互斥，且只对应一个现有原子 Skill；不得把单项目与多项目 Review 等两个 Skill 合并成一个选项。用户回答任一选项后必须能直接选择一次，不再需要第二个区分问题。
 
