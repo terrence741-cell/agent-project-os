@@ -1,6 +1,6 @@
 ---
 name: project-os
-description: "An explicit, low-frequency help entry for Agent Project OS. Use only when the user clearly wants to set up or repair their project system but does not know which capability to choose, such as “should I set up memory, take over the project, or review its structure?” or “I want Project OS but do not know which tool fits”. Do not take over daily work in an existing project: “continue project X”, “what should I do today?”, “show progress”, and “update the project” follow core Memory, the stable project entry, and local protocols. Pure business tasks and requests that name an atomic Skill also bypass this router. Ask at most one distinguishing question, choose one existing Skill, then exit; read no project and write nothing while routing."
+description: "When the user explicitly says they want to use Agent Project OS to set up or repair their project system but do not know which capability to choose, load this Skill first; do not answer or start asking on your own. For that explicit, low-frequency help only — it does not take over daily project work, pure business tasks, or requests that already name an atomic Skill."
 ---
 
 # Project OS
@@ -44,12 +44,14 @@ If genuine ambiguity remains, ask one question that separates the candidate path
 
 > Do you need to set up long-term memory, start or organize one project, inspect one project's structure, compare several projects, or perform an explicit generic check-in?
 
-Choose once after the answer. Do not begin a second interview in this Skill.
+Each option must be mutually exclusive and map to exactly one existing atomic Skill; never combine single-project and multi-project review, or any other two Skills, into one answer option. Any option the user selects must allow one direct choice without a second distinguishing question.
+
+Stay neutral while clarifying. Do not recommend a default Skill, a default execution order, or claim that “starting with X cannot go wrong”; do not use a possible dependency to pre-judge the route for the user. Choose once after the answer. Do not begin a second interview in this Skill.
 
 ## Boundaries
 
 - Read no workspace index, project file, Memory, folder, or conversation history while routing.
 - Create, modify, move, or delete no file.
-- Do not assess project state, summarize evidence, diagnose blockers, or recommend business action beyond capability selection.
+- Do not assess project state, summarize evidence, diagnose blockers, or recommend business action, a default Skill, or an execution order beyond capability selection.
 - Exit after choosing one atomic Skill. Later daily work follows Memory and the local project protocol.
 - The user may always bypass this router and invoke an atomic Skill directly.
