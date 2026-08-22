@@ -8,13 +8,6 @@
       "role": "canonical",
       "version": "1.0.2",
       "source": "plugins/agent-project-os"
-    },
-    {
-      "name": "agent-project-os-en",
-      "language": "en",
-      "role": "localized-release-package",
-      "version": "1.0.2",
-      "source": "plugins/agent-project-os-en"
     }
   ],
   "required_parity": [

@@ -1,7 +1,5 @@
 # Agent Project OS 中文包
 
-[English package](../agent-project-os-en/README.md) · [双语分发契约](../../distribution/BILINGUAL-DISTRIBUTION.zh-CN.md)
-
 Agent Project OS 是一套按需使用的项目搭建与检修工具。它帮助 Codex、Claude Code 等文件系统型 Agent 按“单一物理 Memory 库、薄总索引、按需主题文件、项目稳定入口”的方法建立长期工作系统，并检查结构是否能被全新会话续接。结构建立后，插件应当隐身；日常工作由宿主 Agent 直接读取 Memory 和项目文件完成。
 
 ## 适合这些时刻
@@ -66,7 +64,7 @@ Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳�
 
 ## 安装
 
-本包名称是 `agent-project-os`，适用于中文工作界面。不要与 `agent-project-os-en` 同时安装，因为两包暴露相同的 Skill 名。
+本包名称是 `agent-project-os`，适用于中文工作界面。本分支是培训实操用的中文专用分支，插件市场只显示这一包。
 
 当前是 V1.0.2 发布候选：Codex 和 Claude Code 的包清单均已提供；最终 GitHub 安装命令将在真实公开仓库 URL 上完成双端全新安装测试后写入。现阶段请通过宿主的本地 Marketplace／插件源流程添加仓库根目录，并选择 `agent-project-os`。
 
@@ -85,6 +83,6 @@ Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网�
 
 ## 状态
 
-V1.0.2 发布候选。包结构、双语行为、按需触发、Memory 路由交接与安全边界已通过静态验证；共享 Memory preset 已通过本地真实双宿主隔离会话、按需读取与权限对照。真实 GitHub 1.0.2 双端安装、完整 A–F 和陌生用户试用仍是发布门禁，不宣称已经公开可用。
+V1.0.2 中文实操候选。包结构、按需触发、Memory 路由交接与安全边界已通过静态验证；共享 Memory preset 已通过本地真实双宿主隔离会话、按需读取与权限对照。真实 GitHub 双端正式发布、完整 A–F 和陌生用户试用仍是发布门禁，不宣称已经公开可用。
 
 Apache-2.0。见 [LICENSE](LICENSE)。

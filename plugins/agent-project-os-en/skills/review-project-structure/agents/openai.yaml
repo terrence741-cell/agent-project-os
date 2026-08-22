@@ -1,4 +1,0 @@
-interface:
-  display_name: "Review Project Structure"
-  short_description: "Diagnose whether a project is resumable."
-  default_prompt: "Use $review-project-structure to assess this project without changing files."

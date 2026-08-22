@@ -1,4 +1,0 @@
-interface:
-  display_name: "Bootstrap Workspace"
-  short_description: "Set up one durable Memory shared across Agent hosts."
-  default_prompt: "Use $bootstrap-workspace to propose a reviewable, recoverable shared long-term Memory system."

@@ -1,6 +1,0 @@
-interface:
-  display_name: "State Handoff"
-  short_description: "Create a reviewable state proposal on request."
-  default_prompt: "Use $state-handoff to turn this project update into a reviewable state-change proposal."
-policy:
-  allow_implicit_invocation: false

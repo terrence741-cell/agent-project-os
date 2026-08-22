@@ -1,4 +1,0 @@
-interface:
-  display_name: "Project OS"
-  short_description: "Choose a setup or repair Skill when unsure."
-  default_prompt: "Use $project-os when I am explicitly unsure which setup or repair capability fits."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Review Portfolio"
-  short_description: "Review project risks from a thin index."
-  default_prompt: "Use $review-portfolio to review this project portfolio from its index, without changing project files."
