@@ -1,13 +1,24 @@
 {
   "schema_version": 1,
   "canonical_package": "agent-project-os",
+  "release_channel": "beta",
+  "validation_status": "b03-open",
   "packages": [
     {
       "name": "agent-project-os",
+      "host": "codex",
       "language": "zh-CN",
       "role": "canonical",
-      "version": "1.0.2",
+      "version": "1.1.0-beta.1",
       "source": "plugins/agent-project-os"
+    },
+    {
+      "name": "agent-project-os",
+      "host": "claude-code",
+      "language": "zh-CN",
+      "role": "host-companion",
+      "version": "1.1.0-beta.1",
+      "source": "plugins/agent-project-os-claude"
     }
   ],
   "required_parity": [

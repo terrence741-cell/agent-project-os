@@ -1,4 +1,4 @@
 interface:
   display_name: "初始化工作区"
-  short_description: "搭建可由 Codex 与 Claude Code 共用的长期 Memory。"
-  default_prompt: "使用 $bootstrap-workspace 为我提议一套可审阅、可恢复的共享长期 Memory。"
+  short_description: "从真实工作搭建 Memory 与第一个可续接项目。"
+  default_prompt: "我第一次使用 Agent Project OS。请从零带我建立长期 Memory，并从我的真实工作中选出 1 个适合长期跟进的项目。一次只问我一个容易回答的问题，写入前先让我确认。"

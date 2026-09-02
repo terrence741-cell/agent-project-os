@@ -1,6 +1,6 @@
-# Agent Project OS · Codex 中文包
+# Agent Project OS · Claude Code 中文包
 
-这是 Agent Project OS 的 Codex 专用发布包。它帮助文件系统型 Agent 按“单一物理 Memory 库、薄总索引、按需主题文件、项目稳定入口”的方法建立长期工作系统。结构建立后，插件应当隐身；日常工作由 Codex 直接读取 Memory 和项目文件完成。
+这是 Agent Project OS 的 Claude Code 专用发布包。它帮助文件系统型 Agent 按“单一物理 Memory 库、薄总索引、按需主题文件、项目稳定入口”的方法建立长期工作系统。结构建立后，插件应当隐身；日常工作由 Claude Code 直接读取 Memory 和项目文件完成。
 
 ## 适合这些时刻
 
@@ -10,7 +10,7 @@
 - 现有项目的入口、状态文件或事实来源已经混乱；
 - 明确要求只读审查一个项目的结构；
 - 明确要求比较多个项目；
-- 用户字面调用 `$state-handoff`，要求在没有项目本地更新流程时生成一次状态交接提案；
+- 用户手动调用 `/agent-project-os:state-handoff`，要求在没有项目本地更新流程时生成一次状态交接提案；
 - 确实不知道上述哪种能力适合当前问题。
 
 ## 不适合这些时刻
@@ -28,10 +28,10 @@ Workspace Memory 或精确项目路径 → 薄宿主适配入口 → 项目稳�
 
 这条链路一旦可用，就不需要再次调用 Agent Project OS。
 
-## Codex 显式调用边界
+## Claude Code 显式调用边界
 
-- 只有用户字面输入 `$project-os` 时，才能打开低频能力选择帮助。
-- 只有用户字面输入 `$state-handoff` 时，才能打开通用状态交接。
+- `/agent-project-os:project-os` 是低频能力选择帮助，已使用 `disable-model-invocation: true` 禁止模型自动调用。
+- `/agent-project-os:state-handoff` 是通用状态交接，同样只允许用户手动调用。
 - 其他 4 个 Skill 仍按明确的搭建或检修请求自然匹配；日常续接不调用本插件。
 
 ## 第一次使用
@@ -60,7 +60,7 @@ AI 会用白话、一次一问地带你从 2–3 件真实工作中选出 1 个�
 
 本包名称是 `agent-project-os`，适用于中文工作界面。本分支是面向新用户封闭测试的中文专用分支，插件市场只显示这一包。
 
-当前版本是 `1.1.0-beta.1`。Codex 与 Claude Code 已拆成两个宿主专用包；本包只包含 Codex 清单和 Codex 可接受的 Skill frontmatter。上一轮 B-03 First Run 严格门为 0/3，整改尚待重新实测；本包仅供封闭测试，不宣称为稳定版。
+当前版本是 `1.1.0-beta.1`。Codex 与 Claude Code 已拆成两个宿主专用包；本包只包含 Claude Code 清单和 Claude Code 支持的显式调用 frontmatter。上一轮 B-03 First Run 严格门为 0/3，整改尚待重新实测；本包仅供封闭测试，不宣称为稳定版。
 
 Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网络请求。宿主 Agent 仍会按照你批准的范围读取或修改工作区文件。
 
@@ -72,8 +72,8 @@ Skills 是 `skills/` 下的 Markdown 指令，不包含后台服务或自动网�
 | `launch-project` | 启动、接手或整理一个项目；执行已批准的精确结构修复 |
 | `review-project-structure` | 明确要求只读审查单个项目结构 |
 | `review-portfolio` | 明确要求比较多个项目 |
-| `state-handoff` | 仅在项目没有本地更新流程且用户字面调用 `$state-handoff` 时使用 |
-| `project-os` | 字面调用 `$project-os`，并明确表示不知道该选哪项 Project OS 能力 |
+| `state-handoff` | 仅在项目没有本地更新流程且用户手动调用 `/agent-project-os:state-handoff` 时使用 |
+| `project-os` | 手动调用 `/agent-project-os:project-os`，并明确表示不知道该选哪项 Project OS 能力 |
 
 ## 状态
 

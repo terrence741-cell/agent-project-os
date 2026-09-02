@@ -1,6 +1,6 @@
 {
   "name": "agent-project-os",
-  "version": "1.0.2",
+  "version": "1.1.0-beta.1",
   "description": "按需搭建或检修可续接的 Memory 与 Markdown 项目结构；日常工作不经插件。",
   "author": {
     "name": "Agent Project OS"
@@ -10,12 +10,12 @@
   "interface": {
     "displayName": "Agent Project OS（中文）",
     "shortDescription": "按需搭建记忆与项目结构，完成后回到日常工作。",
-    "longDescription": "在建立长期记忆、启动或接手项目、检查项目结构、审阅多个项目或显式通用状态盘点时，提供可确认的 Markdown 工作流；不确定选择时可直接说明。",
+    "longDescription": "从真实工作建立长期 Memory 与第一个可续接项目，也可按需启动、整理或只读检查 Markdown 项目结构；搭建完成后退出日常工作链路。",
     "developerName": "Agent Project OS",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "告诉我你想搭建记忆、启动或整理项目、检查单项目结构、比较多个项目，还是明确做一次通用状态盘点；如果不确定可直接说明。平时继续项目不需要使用本插件。"
+      "我第一次使用 Agent Project OS。请从零带我建立长期 Memory，并从我的真实工作中选出 1 个适合长期跟进的项目。一次只问我一个容易回答的问题，写入前先让我确认。"
     ]
   }
 }

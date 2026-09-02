@@ -4,13 +4,13 @@
     "name": "Agent Project OS"
   },
   "description": "On-demand setup and repair for durable Memory and Markdown project structures.",
-  "version": "1.0.2",
+  "version": "1.1.0-beta.1",
   "plugins": [
     {
       "name": "agent-project-os",
-      "source": "./plugins/agent-project-os",
+      "source": "./plugins/agent-project-os-claude",
       "description": "按需搭建或检修可续接的 Memory 与 Markdown 项目结构；日常工作不经插件。",
-      "version": "1.0.2",
+      "version": "1.1.0-beta.1",
       "author": {
         "name": "Agent Project OS"
       },

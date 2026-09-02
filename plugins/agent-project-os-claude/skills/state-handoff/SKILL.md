@@ -1,6 +1,7 @@
 ---
 name: state-handoff
-description: 自动调用禁用；只有用户在 Codex 中字面调用 $state-handoff 时才加载。绝不用于“今天做什么”“继续某项目”“下一步做哪个”“看看进展”或普通项目更新，即使用户说项目由 Project OS 管理。加载后只生成可审阅的状态修改提案；确认目标文件与精确内容前绝不写入。
+description: 自动调用禁用；只有用户在 Claude Code 中手动调用 /agent-project-os:state-handoff 时才加载。绝不用于“今天做什么”“继续某项目”“下一步做哪个”“看看进展”或普通项目更新，即使用户说项目由 Project OS 管理。加载后只生成可审阅的状态修改提案；确认目标文件与精确内容前绝不写入。
+disable-model-invocation: true
 ---
 
 # 状态交接

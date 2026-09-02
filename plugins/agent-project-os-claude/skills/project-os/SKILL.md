@@ -1,6 +1,7 @@
 ---
 name: project-os
-description: 自动调用禁用；只有用户在 Codex 中字面调用 $project-os 时才加载。它只在用户不确定该选哪项 Agent Project OS 搭建或检修能力时提供一次选择帮助；绝不用于普通业务、日常续接、计划、进展或更新。
+description: 自动调用禁用；只有用户在 Claude Code 中手动调用 /agent-project-os:project-os 时才加载。它只在用户不确定该选哪项 Agent Project OS 搭建或检修能力时提供一次选择帮助；绝不用于普通业务、日常续接、计划、进展或更新。
+disable-model-invocation: true
 ---
 
 # Project OS
